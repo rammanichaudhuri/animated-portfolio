@@ -64,3 +64,29 @@ body {
     padding: 1.2rem;
     margin: 4rem;
 }
+
+@media screen and (max-width: 1500px) {
+  .subContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.8rem;
+    margin-top: 3em;
+    
+  }
+  .textbox, .desc, .descp {
+    align-self: center;
+  }
+  .textbox {
+    font-size: 6rem;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .textbox {
+    font-size: 2rem;
+    align-self: center;
+     padding: 0;
+  }
+}

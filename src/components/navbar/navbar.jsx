@@ -23,7 +23,6 @@ const animate = {
 export const Navbar = () => {
     return (
         <div className="navbar">
-            
             <motion.div
                 initial={initial}
                 animate={animate}

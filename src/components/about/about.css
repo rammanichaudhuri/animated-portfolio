@@ -65,3 +65,14 @@ body {
 .description {
     padding-bottom: 0.5rem;
 }
+
+@media screen and (max-width: 850px) {
+  .subContainerAbout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    overflow: auto;
+  }
+}

@@ -23,3 +23,13 @@ body {
     gap: 2rem;
     cursor: none;
 }
+
+@media screen and (max-width: 600px) {
+
+    .navlinks {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.8rem;
+    }
+}

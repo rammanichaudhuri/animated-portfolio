@@ -42,3 +42,18 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width: 1500px) {
+  .subContainerProject {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.8rem;
+    margin-top: 3em;
+    overflow: auto;
+  }
+}
+
+
+
+

@@ -74,6 +74,22 @@
   width: fit-content;
   will-change: transform;
   padding: 2rem;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 850px) {
+  .menu__item-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .marquee__inner {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+  }
 }
 
 .marquee__part {
