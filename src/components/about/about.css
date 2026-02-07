@@ -1,10 +1,17 @@
 body {
-    background-color: #f4f866;
+    height: 100vw;
 }
 
-.container {
+.heading {
+    margin-top: 4em;
+    padding: 5vh 10vh;
+    font-size: 4vh;
+    color: #ffffff;
+}
+
+.containerAbout {
     overflow: hidden;
-    background-color: #f4f866;
+    position: relative;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
@@ -13,12 +20,48 @@ body {
     align-items: center;
 }
 
-.subContainer {
-    background-color: #161721;
-    background-clip: content-box;
-    border-radius: 50px;
-    padding: 10px;
+.silkAbout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.subContainerAbout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 3fr;
+    z-index: 1;
+}
+
+.contentAbout {
+    margin-top: 4em;
+}
+
+.contactImageAbout {
+    background-size: cover;
+    padding: 0;
+    margin: 6em 6em 2em 3em;
+    width: 30vw;
+    grid-column: 2;
     display: flex;
-    align-items: end;
     justify-content: center;
+    align-items: center;
+}
+
+.horizontalLineAbout {
+    padding: 2vh 0;
+    font-size: 1.2rem;
+    margin: 0 10vh;
+    color: #ffffff;
+}
+
+.description {
+    padding-bottom: 0.5rem;
 }

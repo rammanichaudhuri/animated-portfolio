@@ -9,6 +9,7 @@ import { AnimatePresence } from 'framer-motion';
 import { Transition } from './Transition';
 import { useState, useEffect } from 'react';
 import CountUp from './CountUp';
+import Cursor from './Cursor';
 
 function App() {
   const location = useLocation();
@@ -41,7 +42,8 @@ function App() {
 
   return (
     <>
-    <Navbar />
+    <Cursor />
+      <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname} initial={false}>
           <Route path='/' element={

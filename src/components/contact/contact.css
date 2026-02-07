@@ -1,10 +1,18 @@
 body {
-    background-color: #f4f866;
+    height: 100vw;
 }
 
-.container {
+.heading {
+    margin-top: 4em;
+    padding: 5vh 10vh;
+    font-size: 4vh;
+    color: #ffffff;
+}
+
+.containerContact {
     overflow: hidden;
-    background-color: #f4f866;
+    position: relative;
+    background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -12,15 +20,52 @@ body {
     align-items: center;
 }
 
-.subContainer {
-    background-color: #161721;
-    background-clip: content-box;
-    border-radius: 50px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    align-items: start;
-    justify-content: start;
+.silkContact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
+
+.subContainerContact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 2fr;
+}
+
+.content {
+    margin-top: 4em;
+}
+
+.contactImage {
+    background-size: cover;
+    border: 3px black solid;
+    outline: 5px solid #ff89d4;
+    outline-offset: 4px;
+    padding: 0;
+    margin: 6em 6em 2em 3em;
+    width: 30vw;
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horizontalLine {
+    padding: 2vh 0;
+    font-size: 1.2rem;
+    margin: 0 10vh;
+    border-bottom: white solid 1px;
+    color: #ffffff;
+}
+
+
 

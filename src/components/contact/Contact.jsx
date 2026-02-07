@@ -1,14 +1,59 @@
 import './contact.css';
+import Silk from '../Silk';
+import PixelTransition from './PixelTransition';
 
 const Contact = () => {
     return (
-        <div className='container'>
-            <div className='subContainer' style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden' }}>
-                <div className='heading'>
-                    <h1>we should talk!</h1>
+        <div className='containerContact'>
+            <div className='silkContact'>
+                <Silk
+                    speed={5}
+                    scale={1}
+                    color="#7B7481"
+                    noiseIntensity={1.5}
+                    rotation={0}
+                />
+            </div>
+            <div className='subContainerContact' style={{ width: '100vw', height: '100vh' }}>
+                <div className='content'>
+                    <div className='heading'>
+                        <h1>we should talk! send me a message.</h1>
+                    </div>
+                    <div className='horizontalLine' style={{  }}>
+                        <div>Email: </div>
+                        <div>rammanititli@gmail.com</div>
+                    </div>
+                    <div className='horizontalLine'>
+                        <div>LinkedIn</div>
+                        <a href='https://linkedin.com/in/rammani-chaudhuri' target="_blank" rel="noopener noreferrer">linkedin.com/in/rammani-chaudhuri</a>
+                    </div>
+                    <div className='horizontalLine'>
+                        <div>Github</div>
+                        <a href='https://github.com/rammanichaudhuri' target="_blank" rel="noopener noreferrer">github.com/rammanichaudhuri</a>
+                    </div>
                 </div>
-                <div style={{ height: '400px', position: 'relative' }}>
-                    
+                <div className='contactImage'>
+                <PixelTransition
+                    firstContent={
+                        <img
+                            src='src/assets/images/pink6.jpg'
+                            alt="image"
+                            style={{ width: "inherit", height: "inherit", objectFit: "cover" }}
+                        />
+                    }
+                    secondContent={
+                        <img
+                            src='src/assets/images/pink4.jpg'
+                            alt="image"
+                            style={{ width: "inherit", height: "inherit", objectFit: "cover" }}
+                        />
+                    }
+                    gridSize={8}
+                    pixelColor='#ffffff'
+                    once={false}
+                    animationStepDuration={0.4}
+                    className="custom-pixel-card"
+                />
                 </div>
             </div>
         </div>

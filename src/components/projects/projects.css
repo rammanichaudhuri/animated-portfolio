@@ -1,18 +1,18 @@
-body {
-    background-color: #f4f866;
-}
-
 .heading {
     margin-top: 4em;
-    padding: 20px 50px 20px 50px;
+    padding: 5vh 10vh;
     font-size: 4vh;
     color: #ffffff;
-    /* background-color: #d42430; */
 }
 
-.container {
+body {
+    height: 100vw;
+}
+
+.containerProject {
     overflow: hidden;
-    background-color: #f4f866;
+    position: relative;
+    background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -20,14 +20,25 @@ body {
     align-items: center;
 }
 
-.subContainer {
-    background-color: #161721;
-    background-clip: content-box;
-    border-radius: 50px;
-    padding: 10px;
+.silkProject {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.subContainerProject {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
     display: flex;
-    flex-direction: column;
-    width: 100vw;
     align-items: start;
     justify-content: start;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
 }

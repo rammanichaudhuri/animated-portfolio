@@ -6,14 +6,14 @@ import './FlowingMenu.css';
 function FlowingMenu({
   items = [],
   speed = 15,
-  textColor = '#fff',
-  bgColor = '#060010',
-  marqueeBgColor = '#fff',
+  textColor = 'rgb(255, 255, 255)',
+  bgColor = transparent,
+  marqueeBgColor = 'rgb(255, 255, 255)',
   marqueeTextColor = '#060010',
-  borderColor = '#fff'
+  borderColor = 'rgb(255, 255, 255)'
 }) {
   return (
-    <div className="menu-wrap" style={{ backgroundColor: bgColor }}>
+    <div className="menu-wrap" style={{ backgroundColor: "transparent" }}>
       <nav className="menu">
         {items.map((item, idx) => (
           <MenuItem
@@ -31,7 +31,7 @@ function FlowingMenu({
   );
 }
 
-function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marqueeTextColor, borderColor }) {
+function MenuItem({ link, text, descript, descriptn, timePeriod, image, speed, textColor, marqueeBgColor, marqueeTextColor, borderColor }) {
   const itemRef = useRef(null);
   const marqueeRef = useRef(null);
   const marqueeInnerRef = useRef(null);
@@ -72,7 +72,7 @@ function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marquee
     calculateRepetitions();
     window.addEventListener('resize', calculateRepetitions);
     return () => window.removeEventListener('resize', calculateRepetitions);
-  }, [text, image]);
+  }, [text, descriptn]);
 
   useEffect(() => {
     const setupMarquee = () => {
@@ -145,16 +145,13 @@ function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marquee
         style={{ color: textColor }}
       >
         {text}
+        <div>{descript}</div>
+        <div>{timePeriod}</div>
       </a>
       <div className="marquee" ref={marqueeRef} style={{ backgroundColor: marqueeBgColor }}>
         <div className="marquee__inner-wrap">
           <div className="marquee__inner" ref={marqueeInnerRef} aria-hidden="true">
-            {[...Array(repetitions)].map((_, idx) => (
-              <div className="marquee__part" key={idx} style={{ color: marqueeTextColor }}>
-                <span>{text}</span>
-                <div className="marquee__img" style={{ backgroundImage: `url(${image})` }} />
-              </div>
-            ))}
+            {descriptn}
           </div>
         </div>
       </div>

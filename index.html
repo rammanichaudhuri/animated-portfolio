@@ -25,19 +25,6 @@
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="loading-screen" style="position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff; /* Or any color you prefer */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;">
-    <!-- You can put a simple message, spinner, or image here -->
-    <div class="loader">Loading...</div>
-  </div>
   <div id="root"></div>
   <!--
       This HTML file is a template.
@@ -49,15 +36,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  <script>
-    window.addEventListener('load', (event) => {
-      // Hide the loading screen
-      document.getElementById('loading-screen').style.display = 'none';
-
-      // Show the main content
-      document.getElementById('root').style.display = 'block';
-    });
-  </script>
   <script type="module" src="/src/index.jsx">
   </script>
 </body>

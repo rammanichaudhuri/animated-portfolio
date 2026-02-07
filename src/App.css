@@ -1,9 +1,11 @@
 body {
-    background: #161721;
+    background: #2b292f;
+    overflow: hidden;
+    cursor: none !important;
 }
 
 .countUp {
-    background: #161721;
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +20,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: #161721;
+    background: #2b292f;
     transform-origin: bottom;
     z-index: 9999;
 }
@@ -29,9 +31,13 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: #161721;
+    background: #2b292f;
     transform-origin: top;
     z-index: 9999;
+}
+
+a {
+    cursor: none;
 }
 
 

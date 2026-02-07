@@ -9,7 +9,7 @@ const content = {
     }
 };
 
-const initial = { y: 100, opacity: 0 };
+const initial = { y: 100, opacity: 1 };
 const animate = {
     y: 0,
     opacity: 1,

@@ -3,20 +3,23 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: large;
+    cursor: none;
 }
 
 .navbar {
     position: fixed;
-    z-index: 1;
-    color: white;
+    z-index: 10;
+    color: rgb(255, 255, 255);
     display: flex;
     padding: 40px;
     justify-content: center;
     width: 100%;
+    cursor: none;
 }
 
 .navlinks {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    cursor: none;
 }
