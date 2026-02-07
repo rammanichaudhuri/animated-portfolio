@@ -11,8 +11,9 @@ body {
     z-index: 10;
     color: rgb(255, 255, 255);
     display: flex;
-    padding: 40px;
+    padding: 10px;
     justify-content: end;
+    align-items: start;
     width: 100%;
     cursor: none;
 }
@@ -46,7 +47,8 @@ body {
 }
 
 .navactive {
-    display: block;
-    height: "400px"
+    display: flex;
+    flex-direction: column;
+    width: min-content;
         /* Shown when toggled */
 }

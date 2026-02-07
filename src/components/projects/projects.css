@@ -50,6 +50,7 @@ body {
     justify-content: space-between;
     gap: 0.8rem;
     margin-top: 3em;
+    padding-bottom: 6em;
     overflow: auto;
   }
 }

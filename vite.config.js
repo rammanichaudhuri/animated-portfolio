@@ -6,7 +6,6 @@ export default defineConfig(() => {
     build: {
       outDir: 'build',
     },
-    base: '/animated-portfolio/',
     plugins: [react()],
   };
 });

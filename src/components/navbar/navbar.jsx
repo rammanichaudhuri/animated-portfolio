@@ -34,9 +34,6 @@ export const Navbar = () => {
     }
     return (
         <div className="navbar">
-            <button id="hamburger" style={{ textAlign: "end" }} onClick={() => navActive ? closeNav() : openNav()}>
-                <FaBars size={24} color="white" />
-            </button>
             <motion.div
                 initial={initial}
                 animate={animate}
@@ -59,6 +56,9 @@ export const Navbar = () => {
                         </NavLink>
                     </nav>
             </motion.div>
+            <button id="hamburger" style={{ textAlign: "end" }} onClick={() => navActive ? closeNav() : openNav()}>
+                <FaBars size={24} color="white" />
+            </button>
         </div>
     );
 }
