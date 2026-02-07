@@ -1,0 +1,51 @@
+import { Link, NavLink } from "react-router-dom";
+import './navbar.css';
+import { AnimatePresence, delay, motion, stagger } from "framer-motion";
+import RevealText from "./RevealText";
+
+const content = {
+    animate: {
+        transition: { staggerChildren: (0.2, { from: "last" }), delayChildren: 3.5 },
+    }
+};
+
+const initial = { y: 100, opacity: 0 };
+const animate = {
+    y: 0,
+    opacity: 1,
+    transition: {
+        duration: 0.7,
+        ease: [0.6, -0.05, 0.01, 0.99],
+        delay: 0.5
+    }
+}
+
+export const Navbar = () => {
+    return (
+        <div className="navbar">
+            
+            <motion.div
+                initial={initial}
+                animate={animate}
+                variants={content}
+            >
+                <Link className="logo" to='/'>
+                </Link>
+                <nav className="navlinks">
+                    <NavLink to='/'>
+                       <RevealText text={"home"} />
+                    </NavLink>
+                    <NavLink to='/projects'>
+                        <RevealText text={"work"} />
+                    </NavLink>
+                    <NavLink to='/about'>
+                        <RevealText text={"about"} />
+                    </NavLink>
+                    <NavLink to='/contact'>
+                       <RevealText text={"contact"} />
+                    </NavLink>
+                </nav>
+            </motion.div>
+        </div>
+    );
+}
