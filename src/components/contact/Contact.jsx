@@ -36,14 +36,14 @@ const Contact = () => {
                 <PixelTransition
                     firstContent={
                         <img
-                            src='src/assets/images/pink6.jpg'
+                            src='https://cdn.cosmos.so/be20a0fd-639e-4bb7-9c68-93a689b05197?format=jpeg'
                             alt="image"
                             style={{ width: "inherit", height: "inherit", objectFit: "cover" }}
                         />
                     }
                     secondContent={
                         <img
-                            src='src/assets/images/pink4.jpg'
+                            src='https://cdn.cosmos.so/dc426982-e3d5-496e-8b9c-814d040483d4?format=jpeg'
                             alt="image"
                             style={{ width: "inherit", height: "inherit", objectFit: "cover" }}
                         />

@@ -3,10 +3,10 @@ import Silk from '../Silk';
 import Stack from './Stack';
 
 const images = [
-    "src/assets/images/pink8.jpg",
-    "src/assets/images/book1.jpg",
-    "src/assets/images/pink7.jpg",
-    "src/assets/images/pink5.jpg"
+    "https://cdn.cosmos.so/f1317272-c54a-4051-9aba-d49084fbf334?format=jpeg",
+    "https://cdn.cosmos.so/9fba563d-b1a3-4890-9a55-397bdfc5150e?format=jpeg",
+    "https://cdn.cosmos.so/0b749cff-492a-4bd6-ae09-286cbeed1d32?format=jpeg",
+    "https://cdn.cosmos.so/765803ee-1a5d-41b4-8720-cc42173e0e7d?format=jpeg"
 ];
 
 const About = () => {
