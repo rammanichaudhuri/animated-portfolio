@@ -1,4 +1,5 @@
 {
+  "homepage": "http://rammanichaudhuri.github.io/animated-portfolio",
   "name": "animated-portfolio-react",
   "version": "0.1.0",
   "private": true,
@@ -23,6 +24,7 @@
     "postcss": "^8.5.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "react-icons": "^5.5.0",
     "react-loaders": "^3.0.1",
     "react-router-dom": "^7.13.0",
     "react-transition-group": "^4.4.5",
@@ -38,7 +40,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -60,6 +64,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.3",
+    "gh-pages": "^6.3.0",
     "vite": "^7.3.1"
   }
 }

@@ -12,24 +12,41 @@ body {
     color: rgb(255, 255, 255);
     display: flex;
     padding: 40px;
-    justify-content: center;
+    justify-content: end;
     width: 100%;
     cursor: none;
 }
 
 .navlinks {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    cursor: none;
+    display: none;
 }
 
-@media screen and (max-width: 600px) {
-
+@media screen and (min-width: 600px) {
     .navlinks {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 0.8rem;
+        justify-content: center;
+        gap: 2rem;
+        cursor: none;
     }
+
+    .navbar {
+        position: fixed;
+        z-index: 10;
+        color: rgb(255, 255, 255);
+        display: flex;
+        padding: 40px;
+        justify-content: center;
+        width: 100%;
+        cursor: none;
+    }
+
+    #hamburger {
+        display: none;
+    }
+}
+
+.navactive {
+    display: block;
+    height: "400px"
+        /* Shown when toggled */
 }
