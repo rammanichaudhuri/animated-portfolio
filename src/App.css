@@ -1,3 +1,7 @@
+body {
+    background: #161721;
+}
+
 .countUp {
     background: #161721;
     display: flex;
@@ -6,6 +10,7 @@
     height: 100vh;
     color: white;
 }
+
 
 .slideIn {
     position: fixed;
