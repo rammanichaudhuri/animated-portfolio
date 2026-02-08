@@ -13,7 +13,7 @@ const HomePage = () => {
                     rotation={0}
                 />
             </div> */}
-            <div className='subContainer' style={{ width: '100vw', position: 'relative', overflow: 'hidden', display: 'flex', justifyContent: 'end' }}>
+            <div className='subContainer' style={{ width: '100vw', position: 'relative', overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
                 <div className='textbox'>
                     <h1>rammani</h1>
                     <h1>chaudhuri.</h1>
