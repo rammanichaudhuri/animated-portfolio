@@ -2,6 +2,7 @@ body {
     background: #2b292f;
     overflow: hidden;
     cursor: none !important;
+    height: 100vh;
 }
 
 .countUp {
@@ -36,10 +37,28 @@ body {
     z-index: 9999;
 }
 
+.silk {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 a {
     cursor: none;
 }
 
+@media screen and (max-width: 1500px) {
+    body {
+        height: auto;
+        overflow: scroll;
+    }
+
+    .silk {
+        height: 200%;
+    }
+}
 
 
 

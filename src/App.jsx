@@ -10,6 +10,7 @@ import { Transition } from './Transition';
 import { useState, useEffect } from 'react';
 import CountUp from './CountUp';
 import Cursor from './Cursor';
+import Silk from './components/Silk';
 
 function App() {
   const location = useLocation();
@@ -42,7 +43,14 @@ function App() {
 
   return (
     <>
-    <Cursor />
+      <Cursor />
+      <div className='silk'>
+        <Silk speed={5}
+          scale={1}
+          color="#7B7481"
+          noiseIntensity={1.5}
+          rotation={0} />
+      </div>
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname} initial={false}>

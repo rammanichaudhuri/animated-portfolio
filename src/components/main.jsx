@@ -4,7 +4,7 @@ import Silk from './Silk';
 const HomePage = () => {
     return (
         <div className="container">
-            <div className='silk'>
+            {/* <div className='silk'>
                 <Silk
                     speed={5}
                     scale={1}
@@ -12,8 +12,8 @@ const HomePage = () => {
                     noiseIntensity={1.5}
                     rotation={0}
                 />
-            </div>
-            <div className='subContainer' style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden', display: 'flex', justifyContent: 'end' }}>
+            </div> */}
+            <div className='subContainer' style={{ width: '100vw', position: 'relative', overflow: 'hidden', display: 'flex', justifyContent: 'end' }}>
                 <div className='textbox'>
                     <h1>rammani</h1>
                     <h1>chaudhuri.</h1>

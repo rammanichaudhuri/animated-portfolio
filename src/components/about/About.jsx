@@ -12,7 +12,7 @@ const images = [
 const About = () => {
     return (
         <div className='containerAbout'>
-            <div className='silkAbout'>
+            {/* <div className='silkAbout'>
                 <Silk
                     speed={5}
                     scale={1}
@@ -20,8 +20,8 @@ const About = () => {
                     noiseIntensity={1.5}
                     rotation={0}
                 />
-            </div>
-            <div className='subContainerAbout' style={{ width: '100vw', height: '100vh' }}>
+            </div> */}
+            <div className='subContainerAbout' style={{ width: '100vw' }}>
                 <div className='contentAbout'>
                     <div className='headingAbout'>
                         <h1>here's a little about me...</h1>

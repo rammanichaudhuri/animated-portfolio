@@ -5,7 +5,7 @@ import PixelTransition from './PixelTransition';
 const Contact = () => {
     return (
         <div className='containerContact'>
-            <div className='silkContact'>
+            {/* <div className='silkContact'>
                 <Silk
                     speed={5}
                     scale={1}
@@ -13,8 +13,8 @@ const Contact = () => {
                     noiseIntensity={1.5}
                     rotation={0}
                 />
-            </div>
-            <div className='subContainerContact' style={{ width: '100vw', height: '100vh' }}>
+            </div> */}
+            <div className='subContainerContact' style={{ width: '100vw' }}>
                 <div className='content'>
                     <div className='headingContact'>
                         <h1>we should talk! send me a message.</h1>

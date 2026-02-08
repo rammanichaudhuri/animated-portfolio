@@ -14,7 +14,7 @@ const demoItems = [
 const Projects = () => {
     return (
         <div className='containerProject'>
-            <div className='silkProject'>
+            {/* <div className='silkProject'>
                 <Silk
                     speed={5}
                     scale={1}
@@ -22,12 +22,12 @@ const Projects = () => {
                     noiseIntensity={1.5}
                     rotation={0}
                 />
-            </div>
-            <div className='subContainerProject' style={{ width: '100vw', height: '100vh' }}>
-                <div className='heading'>
+            </div> */}
+            <div className='subContainerProject' style={{ width: '100vw' }}>
+                <div className='headingProject'>
                     <h1>projects / work / education:</h1>
                 </div>
-                <div style={{ height: '400px', position: 'relative' }}>
+                <div className='menu' style={{ height: '400px', position: 'relative' }}>
                     <FlowingMenu items={demoItems}
                         speed={15}
                         textColor="#ffffff"

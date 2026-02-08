@@ -70,8 +70,9 @@ body {
 
     .containerContact {
         /* height: auto; */
-        height: calc(100vh - 80px);
-        overflow: auto;
+        min-height: 100vh;
+        height: 100%;
+        overflow: scroll;
     }
 
     .subContainerContact {
@@ -79,6 +80,7 @@ body {
         flex-direction: column;
         justify-content: space-between;
         align-items: start;
+        height: 100%;
         gap: 1rem;
         /* overflow: auto; */
     }

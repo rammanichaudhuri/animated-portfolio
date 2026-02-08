@@ -1,4 +1,4 @@
-.heading {
+.headingProject {
     margin-top: 4em;
     padding: 5vh 10vh;
     font-size: 4vh;
@@ -6,7 +6,7 @@
 }
 
 body {
-    height: 100vw;
+    height: 100vh;
 }
 
 .containerProject {
@@ -47,17 +47,26 @@ body {
 
     .containerProject {
         /* height: auto; */
-        height: calc(100vh - 80px);
-        overflow: auto;
+        min-height: 100vh;
+        height: 100%;
+        overflow: scroll;
     }
 
     .subContainerProject {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: start;
         gap: 0.8rem;
         margin-top: 3em;
+        height: 100%;
         padding-bottom: 6em;
         overflow: auto;
     }
+
+    .headingProject {
+        margin-left: 2rem;
+        padding: 0;
+        width: 75%;
+    }
+
 }

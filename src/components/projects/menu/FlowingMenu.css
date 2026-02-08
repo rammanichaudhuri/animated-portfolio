@@ -81,8 +81,10 @@
   .menu__item-link {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 1rem;
+    justify-content: start;
+    align-items: start;
+    gap: 0;
+    padding: 2rem;
     font-size: small;
   }
 
@@ -91,6 +93,7 @@
   }
 
   .menu-wrap {
+
     overflow: auto;
   }
 }
