@@ -74,7 +74,7 @@ body {
     gap: 0.8rem;
     height: 100%;
     margin-top: 3em;
-    padding-bottom: 20px;
+    padding-bottom: 3em;
     overflow: auto;
   }
 
@@ -85,7 +85,7 @@ body {
   }
 
   .textbox {
-    font-size: 6rem;
+    font-size: 5rem;
     padding: 0;
   }
 }
