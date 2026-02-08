@@ -43,7 +43,7 @@ body {
     flex-direction: column;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1024px ) {
 
     .subContainerProject {
         display: flex;

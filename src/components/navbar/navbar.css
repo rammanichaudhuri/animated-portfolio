@@ -22,7 +22,7 @@ body {
     display: none;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
     .navlinks {
         display: flex;
         justify-content: center;

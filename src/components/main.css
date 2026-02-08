@@ -90,7 +90,44 @@ body {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1500px) {
+
+  .subContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 0.8rem;
+    height: 100%;
+    margin-top: 3em;
+    padding-bottom: 6em;
+    overflow: auto;
+  }
+
+  .textbox,
+  .desc,
+  .descp {
+    align-self: center;
+  }
+
+  .textbox {
+    font-size: 3rem;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .subContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 0.8rem;
+    height: 100%;
+    margin-top: 3em;
+    padding-bottom: 6em;
+    overflow: auto;
+  }
+
   .textbox {
     font-size: 2rem;
     align-self: center;
