@@ -51,12 +51,7 @@ a {
 
 @media screen and (max-width: 1500px) {
     body {
-        height: auto;
         overflow: scroll;
-    }
-
-    .silk {
-        height: 200%;
     }
 }
 

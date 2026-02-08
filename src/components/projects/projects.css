@@ -45,13 +45,6 @@ body {
 
 @media screen and (max-width: 1500px) {
 
-    .containerProject {
-        /* height: auto; */
-        min-height: 100vh;
-        height: 100%;
-        overflow: scroll;
-    }
-
     .subContainerProject {
         display: flex;
         flex-direction: column;

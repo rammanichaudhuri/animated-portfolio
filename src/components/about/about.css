@@ -68,13 +68,6 @@ body {
 
 @media screen and (max-width: 850px) {
 
-    .containerAbout {
-        /* height: auto; */
-        min-height: 100vh;
-        height: 100%;
-        overflow: scroll;
-    }
-
     .subContainerAbout {
         display: flex;
         flex-direction: column;
@@ -83,6 +76,7 @@ body {
         height: 100%;
         align-items: center;
         overflow: auto;
+        padding-bottom: 6em;
         font-size: medium;
     }
 
