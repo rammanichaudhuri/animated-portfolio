@@ -1,5 +1,5 @@
 body {
-  height: 100vh;
+  height: calc(100vh);
 }
 
 .container {
@@ -67,10 +67,6 @@ body {
 
 @media screen and (max-width: 1500px) {
 
-  .silk {
-    height: 100%;
-  }
-
   .subContainer {
     display: flex;
     flex-direction: column;
@@ -78,7 +74,7 @@ body {
     gap: 0.8rem;
     height: 100%;
     margin-top: 3em;
-    padding-bottom: 6em;
+    padding-bottom: 20px;
     overflow: auto;
   }
 
@@ -99,5 +95,13 @@ body {
     font-size: 2rem;
     align-self: center;
     padding: 0;
+  }
+  .desc,
+  .descp {
+    font-size: small;
+  }
+
+  .descp {
+    margin: 2rem;
   }
 }
