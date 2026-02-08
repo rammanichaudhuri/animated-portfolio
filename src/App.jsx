@@ -43,7 +43,6 @@ function App() {
 
   return (
     <>
-      <Cursor />
       <div className='silk'>
         <Silk speed={5}
           scale={1}
@@ -51,6 +50,7 @@ function App() {
           noiseIntensity={1.5}
           rotation={0} />
       </div>
+      <Cursor />
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname} initial={false}>

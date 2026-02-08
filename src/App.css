@@ -2,7 +2,9 @@ body {
     background: #2b292f;
     overflow: hidden;
     cursor: none !important;
-    height: 100vh;
+    height: calc(100vh);
+    margin: 0;
+    padding: 0;
 }
 
 .countUp {
@@ -49,11 +51,7 @@ a {
     cursor: none;
 }
 
-@media screen and (max-width: 1500px) {
-    body {
-        overflow: scroll;
-    }
-}
+
 
 
 
