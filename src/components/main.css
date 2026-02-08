@@ -1,5 +1,5 @@
 body {
-    height: 100vw;
+    height: calc(100vh - 70px);
 }
 
 .container {
@@ -66,13 +66,20 @@ body {
 }
 
 @media screen and (max-width: 1500px) {
+
+  .container {
+        /* height: auto; */
+        height: calc(100vh - 80px);
+        overflow: auto;
+    }
+
   .subContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 0.8rem;
     margin-top: 3em;
-    
+    overflow: auto;
   }
   .textbox, .desc, .descp {
     align-self: center;

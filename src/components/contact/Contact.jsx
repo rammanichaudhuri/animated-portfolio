@@ -16,7 +16,7 @@ const Contact = () => {
             </div>
             <div className='subContainerContact' style={{ width: '100vw', height: '100vh' }}>
                 <div className='content'>
-                    <div className='heading'>
+                    <div className='headingContact'>
                         <h1>we should talk! send me a message.</h1>
                     </div>
                     <div className='horizontalLine' style={{  }}>

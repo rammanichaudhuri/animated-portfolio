@@ -1,8 +1,8 @@
 body {
-    height: 100vw;
+    height: 100vh;
 }
 
-.heading {
+.headingAbout {
     margin-top: 4em;
     padding: 5vh 10vh;
     font-size: 4vh;
@@ -67,12 +67,40 @@ body {
 }
 
 @media screen and (max-width: 850px) {
-  .subContainerAbout {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1rem;
-    align-items: center;
-    overflow: auto;
-  }
+
+    .containerAbout {
+        /* height: auto; */
+        height: calc(100vh - 80px);
+        overflow: auto;
+    }
+
+    .subContainerAbout {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+        overflow: auto;
+        font-size: medium;
+    }
+
+    .headingAbout {
+        margin-left: 2rem;
+        padding: 0;
+        width: 75%;
+    }
+
+    .horizontalLineAbout {
+        margin-left: 2rem;
+        padding: 0;
+        width: 75%;
+    }
+
+    .contactImageAbout {
+        margin: 1em;
+        width: 85%;
+        align-self: start;
+        justify-content: start;
+    }
+
 }

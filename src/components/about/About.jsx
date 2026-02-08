@@ -23,7 +23,7 @@ const About = () => {
             </div>
             <div className='subContainerAbout' style={{ width: '100vw', height: '100vh' }}>
                 <div className='contentAbout'>
-                    <div className='heading'>
+                    <div className='headingAbout'>
                         <h1>here's a little about me...</h1>
                     </div>
                     <div className='horizontalLineAbout' style={{}}>

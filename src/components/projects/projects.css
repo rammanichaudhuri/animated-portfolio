@@ -44,17 +44,20 @@ body {
 }
 
 @media screen and (max-width: 1500px) {
-  .subContainerProject {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 0.8rem;
-    margin-top: 3em;
-    padding-bottom: 6em;
-    overflow: auto;
-  }
+
+    .containerProject {
+        /* height: auto; */
+        height: calc(100vh - 80px);
+        overflow: auto;
+    }
+
+    .subContainerProject {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.8rem;
+        margin-top: 3em;
+        padding-bottom: 6em;
+        overflow: auto;
+    }
 }
-
-
-
-
