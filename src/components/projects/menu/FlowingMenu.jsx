@@ -2,15 +2,56 @@ import { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 
 import './FlowingMenu.css';
+import './Modal.css';
+
+const projects = [
+  {
+    id: "Loop subscriptions", projectDesc: [
+      "Loop subscriptions is a subscription management app built for Shopify. It is based in Gurgaon.",
+      "Here, I:",
+      "Built interactive analytics dashboards for Loop using Highcharts to visualize subscription management/acquisition/retention and usage frequency data, featuring dynamic charts like Sankey, filters, and toggles for real-time, category-wise comparisons, leading to a 10 percent increase in user engagement.",
+      "Integrated Stripe’s payment SDK to implement secure, seamless payment processing within the application",
+      "Diagnosed and fixed UI/UX bugs, improving application responsiveness and cross-browser compatibility.",
+      "Authored detailed documentation covering component usage, state management, and API integration."
+    ]
+  },
+  {
+    id: "Microsoft", projectDesc: [
+      "Contributed to the successful launch of 5 major features, independently leading the development of 2, for the advanced Viva Insights App, which provides tools for analyzing how an organization gets work done and reporting custom analysis to the company’s leaders.",
+      "Spearheaded the pivotal homepage re-design and revamp of L1/L2 pages project, leading to a 25 percent increase in website visits, within a month after the launch. Integrated Role-based access control (RBAC) to assign and restrict permission based on individual user’s role.",
+      "Implemented RESTful API integration and leveraged lazy loading techniques to deliver a performant UX.",
+      "Built 20+ reusable components from scratch, as well as optimized existing. Managed 50+ webpages, using React and TypeScript, ensuring a consistent and high-quality user experience. Utilized Git for code collaboration and version management.",
+      "Collaborated with cross-functional teams of 4 designers, 3 product managers, backend teams, and other frontend developers to deliver features on time and within budget."
+    ]
+  },
+  {
+    id: "collaborative editor", projectDesc: [
+      "Architected a collaborative editing platform enabling real-time multi-user document editing with CRDT-based conflict resolution, supporting 50+ concurrent users with sub-100ms sync latency.",
+      "Features include rich text formatting, real-time presence indicators, comment threading, version history, granular permissions, and offline editing with automatic sync.",
+      "Tech stack: React, TypeScript, Node.js, Yjs, PostgreSQL, WebSocket",
+      "Link: [still ongoing]"
+    ]
+  },
+  {
+    id: "social media app", projectDesc: [
+      "Engineered a fully responsive social media app with the MERN stack, for users to connect and share posts.",
+      "Key features include user management, content creation and sharing, newsfeed, likes and comments.",
+      "Architected the frontend interface with React, combined backend services using Node.js and Express.js, and optimized data management through MongoDB.",
+      "Tech stack: HTML, CSS, JavaScript, React, Redux, Node.js, Express.js, MongoDB",
+      "Link: [still ongoing]"
+    ]
+  }
+]
+
 
 function FlowingMenu({
   items = [],
   speed = 15,
-  textColor = 'rgb(255, 255, 255)',
+  textColor = 'rgb(0, 0, 0)',
   bgColor = transparent,
   marqueeBgColor = 'rgb(255, 255, 255)',
   marqueeTextColor = '#060010',
-  borderColor = 'rgb(255, 255, 255)'
+  borderColor = 'rgb(0, 0, 0)'
 }) {
   return (
     <div className="menu-wrap" style={{ backgroundColor: "transparent" }}>
@@ -37,6 +78,19 @@ function MenuItem({ link, text, descript, descriptn, timePeriod, image, speed, t
   const marqueeInnerRef = useRef(null);
   const animationRef = useRef(null);
   const [repetitions, setRepetitions] = useState(4);
+  const [modal, setModal] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
+
+  const openProjectModal = (id, action) => {
+    if (action === "open") {
+      setModal(true);
+      setModalContent(projects.filter(project => project.id == text));
+    }
+    else {
+      setModal(false);
+      setModalContent(null);
+    }
+  }
 
   const animationDefaults = { duration: 0.6, ease: 'expo' };
 
@@ -136,25 +190,47 @@ function MenuItem({ link, text, descript, descriptn, timePeriod, image, speed, t
   };
 
   return (
+
     <div className="menu__item" ref={itemRef} style={{ borderColor }}>
       <a
         className="menu__item-link"
         href={link}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={{ color: textColor }}
+        style={{ color: textColor, fontFamily: "Pixelify Sans" }}
+        onClick={() => openProjectModal(text, 'open')}
       >
         {text}
         <div>{descript}</div>
         <div>{timePeriod}</div>
+        <div>learn more!</div>
       </a>
       <div className="marquee" ref={marqueeRef} style={{ backgroundColor: marqueeBgColor }}>
         <div className="marquee__inner-wrap">
           <div className="marquee__inner" ref={marqueeInnerRef} aria-hidden="true">
-            {descriptn}
+            {descriptn} {`[click to learn more.]`}
           </div>
         </div>
       </div>
+      {modal ? <div className='modal-overlay'>
+        <div className="modal-content">
+          <div className='modal-text'>
+            {modalContent.map((item) => {
+              return (
+                <>
+                  <h2 className='modal-text' style={{ color: "black" }}>{item.id}</h2>
+                  <p className='modal-text' style={{ color: "black" }}>
+                    {item.projectDesc.map((descrpt) => {
+                    return <li className='modal-text'>{descrpt}</li>
+                  })}</p>
+                </>
+              );
+            })}
+          </div>
+          <button className='modal-close-button' onClick={() => openProjectModal(text, 'close')}>close</button>
+        </div>
+      </div> : null}
+
     </div>
   );
 }

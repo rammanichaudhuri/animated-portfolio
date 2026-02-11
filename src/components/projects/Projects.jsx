@@ -30,8 +30,8 @@ const Projects = () => {
                 <div className='menu' style={{ height: '400px', position: 'relative' }}>
                     <FlowingMenu items={demoItems}
                         speed={15}
-                        textColor="#ffffff"
-                        bgColor="#060010"
+                        textColor="#000000"
+                        bgColor="#ffffff"
                         marqueeBgColor="#ffffff"
                         marqueeTextColor="#060010"
                         borderColor="#ffffff"

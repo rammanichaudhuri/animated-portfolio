@@ -20,14 +20,14 @@ const RevealText = ({ text }) => {
     return (
         <div className="">
             {/* <div className="textBox">{text}</div> */}
-            <div className="containerbox">
+            <div className="containerboxNav">
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     whileHover="visible"
                 // style={{ display: "flex", flexWrap: "wrap", overflow: "hidden", cursor: "pointer" }}
                 >
-                    <div className='textBox'>
+                    <div className='textBoxNav'>
                         {text.split("").map((l, i) => {
                             return <motion.span variants={{
                                 hidden: { y: 0, opacity: 1 }, // Start position: slightly down, invisible
@@ -45,7 +45,7 @@ const RevealText = ({ text }) => {
                                 style={{ display: "inline-block" }} key={i}>{l}</motion.span>
                         })}
                     </div>
-                    <div className='animatedTextBox'>
+                    <div className='animatedTextBoxNav'>
                         {text.split("").map((l, i) => {
                             return <motion.span variants={{
                                 hidden: { y: "100%", opacity: 0 }, // Start position: slightly down, invisible

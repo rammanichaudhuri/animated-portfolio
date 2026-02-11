@@ -7,25 +7,20 @@
 
 body {
     height: 100vh;
+    font-family: 'Pixelify Sans', sans-serif;
 }
 
 .containerProject {
     overflow: hidden;
     position: relative;
+    background-image: url('https://cdn.cosmos.so/0d3abf47-ebb3-4dfb-aa79-0ce908678a71?format=jpeg');
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
     overflow: hidden;
     display: flex;
     align-items: center;
-}
-
-.silkProject {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
 
 .subContainerProject {
@@ -43,7 +38,28 @@ body {
     flex-direction: column;
 }
 
-@media screen and (max-width: 1024px ) {
+@media screen and (max-width: 1700px) {
+
+    .subContainerProject {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 0.8rem;
+        margin-top: 3em;
+        height: 100%;
+        padding-bottom: 6em;
+        overflow: auto;
+    }
+
+    .headingProject {
+        margin-left: 2rem;
+        padding: 0;
+        width: 75%;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
 
     .subContainerProject {
         display: flex;

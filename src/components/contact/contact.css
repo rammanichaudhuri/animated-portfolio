@@ -12,6 +12,8 @@ body {
 .containerContact {
     overflow: hidden;
     position: relative;
+    background-image: url('https://cdn.cosmos.so/0d3abf47-ebb3-4dfb-aa79-0ce908678a71?format=jpeg');
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
@@ -46,7 +48,7 @@ body {
 
 .contactImage {
     background-size: cover;
-    border: 3px black solid;
+    border: 3px rgb(0, 0, 0) solid;
     outline: 5px solid #ff89d4;
     outline-offset: 4px;
     padding: 0;
@@ -62,8 +64,8 @@ body {
     padding: 2vh 0;
     font-size: 1.2rem;
     margin: 0 10vh;
-    border-bottom: white solid 1px;
-    color: #ffffff;
+    border-bottom: rgb(0, 0, 0) solid 1px;
+    color: #000000;
 }
 
 @media screen and (max-width: 1024px) {

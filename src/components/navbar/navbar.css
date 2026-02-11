@@ -1,5 +1,5 @@
 body {
-    font-family: "Instrument Serif", serif;
+    font-family: 'Pixelify Sans', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: large;
@@ -14,12 +14,14 @@ body {
     padding: 10px;
     justify-content: end;
     align-items: start;
-    width: 100%;
+    width: 100vw;
     cursor: none;
 }
 
 .navlinks {
     display: none;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (min-width: 1024px) {
@@ -33,6 +35,7 @@ body {
     .navbar {
         position: fixed;
         z-index: 10;
+        background: transparent;
         color: rgb(255, 255, 255);
         display: flex;
         padding: 40px;
@@ -49,6 +52,7 @@ body {
 .navactive {
     display: flex;
     flex-direction: column;
-    width: min-content;
+    width: 100%;
+    z-index: 10;
         /* Shown when toggled */
 }

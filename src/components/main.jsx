@@ -15,14 +15,14 @@ const HomePage = () => {
             </div> */}
             <div className='subContainer' style={{ width: '100vw' }}>
                 <div className='textbox'>
-                    <h1>rammani</h1>
-                    <h1>chaudhuri.</h1>
+                    <h1>hi!</h1>
+                    <h1 style={{ display: 'flex', flexDirection: 'row' }}>i'm rammani.</h1>
                 </div>
                 <div className='descp'>
-                    <h2 style={{ color: "#FFE4EF", fontSize: "1.5rem" }}>software developer</h2>
+                    <h2 style={{ color: "#000000", fontSize: "1.5rem", fontFamily: "Pixelify Sans" }}>software developer</h2>
                     <br />
                     <h3 className='desc'>I bridge design and code—building interfaces that are both technically
-                        solid and visually crafted. 2+ years at Microsoft + Loop. Currently
+                        solid and visually crafted. 2+ years at Microsoft + Loop, IIT BHU'22. Currently
                         exploring GSAP and motion design.</h3>
                 </div>
             </div>
