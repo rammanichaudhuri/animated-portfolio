@@ -24,12 +24,12 @@ const Contact = () => {
                         <div>rammanititli@gmail.com</div>
                     </div>
                     <div className='horizontalLine'>
-                        <div>LinkedIn</div>
-                        <a href='https://linkedin.com/in/rammani-chaudhuri' target="_blank" rel="noopener noreferrer">linkedin.com/in/rammani-chaudhuri</a>
+                        <div>LinkedIn:</div>
+                        <a style={{ color: "white" }} href='https://linkedin.com/in/rammani-chaudhuri' target="_blank" rel="noopener noreferrer">linkedin.com/in/rammani-chaudhuri</a>
                     </div>
                     <div className='horizontalLine'>
-                        <div>Github</div>
-                        <a href='https://github.com/rammanichaudhuri' target="_blank" rel="noopener noreferrer">github.com/rammanichaudhuri</a>
+                        <div>Github:</div>
+                        <a style={{ color: "white" }} href='https://github.com/rammanichaudhuri' target="_blank" rel="noopener noreferrer">github.com/rammanichaudhuri</a>
                     </div>
                 </div>
                 <div className='contactImage'>

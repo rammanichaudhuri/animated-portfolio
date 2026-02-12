@@ -27,9 +27,9 @@ const About = () => {
                         <h1>here's a little about me...</h1>
                     </div>
                     <div className='horizontalLineAbout' style={{}}>
-                        <div className='description'>I'm a frontend developer with 2+ years of experience building web applications at Microsoft and Loop. I love the intersection of engineering and design—making things that work beautifully and perform well.</div>
-                        <div className='description'>My stack: React, TypeScript, Redux, with a growing focus on animations (GSAP) and design systems. I graduated from IIT BHU in Electrical Engineering, where competitive programming taught me to solve problems efficiently. I still keep my DSA skills sharp on LeetCode and Codeforces.</div>    
-                        <div className='description'>Outside tech, I'm into sketching portraits, devouring books, listening to podcasts, and hitting the gym. Always learning, always building.</div>
+                        <div className='description'>I'm a frontend developer with 2+ years of experience building web applications at Microsoft and Loop subscriptions. I love the intersection of engineering and design—making things that work beautifully and perform well too!</div>
+                        <div className='description'>My tech stack: React, TypeScript, Redux, Node.js, TailwindCSS, MongoDB, MySQL, with a recent focus on animations (GSAP) and design systems. I graduated from IIT BHU in Electrical Engineering in 2022, where competitive programming + building projects with friends taught me to solve problems efficiently along with teamwork. I still keep my DSA skills sharp by practicing regularly on LeetCode and Codeforces.</div>    
+                        <div className='description'>Outside tech, I'm into writing, sketching portraits, devouring books, listening to podcasts, and working out. Always learning, always building!</div>
                     </div>
 
                 </div>

@@ -27,7 +27,7 @@ const Projects = () => {
                 <div className='headingProject'>
                     <h1>projects / work / education:</h1>
                 </div>
-                <div className='menu' style={{ height: '400px', position: 'relative' }}>
+                <div className='menu' style={{ height: '300px', position: 'relative' }}>
                     <FlowingMenu items={demoItems}
                         speed={15}
                         textColor="#000000"

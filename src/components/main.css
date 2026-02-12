@@ -53,6 +53,7 @@ body {
   padding: 1.2rem;
   font-family: 'Pixelify Sans', sans-serif;
   margin: 1rem 6vw 1rem 6vw;
+   /* background-color: rgb(255, 255, 255, 0.7) */
 }
 
 @media screen and (max-width: 1500px) {
