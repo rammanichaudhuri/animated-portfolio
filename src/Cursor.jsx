@@ -39,7 +39,7 @@ const Cursor = () => {
                 <path d="M0 0h24v24H0z" fill="none" />
                 <path d="M12 4l-8 8 1.41 1.41L11 7.83V20h2V7.83l5.58 5.58L20 12l-8-8z" />
             </svg> */}
-            <img src="https://wallpapers-clan.com/wp-content/uploads/2025/09/pink-pixel-cursor-sticker-preview.jpg" />
+            <img src="/cursor2.png" />
         </motion.div>
     );
 };

@@ -42,7 +42,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div>
       {/* <div className='silk'>
         <Silk speed={5}
           scale={1}
