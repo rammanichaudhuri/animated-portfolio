@@ -218,10 +218,10 @@ function MenuItem({ link, text, descript, descriptn, timePeriod, image, speed, t
             {modalContent.map((item) => {
               return (
                 <>
-                  <h2 className='modal-text' style={{ color: "black" }}>{item.id}</h2>
-                  <p className='modal-text' style={{ color: "black" }}>
+                  <h2 className='modal-text' style={{ color: "black", justifySelf: "start" }}>{item.id}</h2>
+                  <p className='modal-text' style={{ color: "black"  }}>
                     {item.projectDesc.map((descrpt) => {
-                    return <li className='modal-text'>{descrpt}</li>
+                    return <li className='modal-text' style={{ textAlign: "start" }}>{descrpt}</li>
                   })}</p>
                 </>
               );

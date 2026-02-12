@@ -34,7 +34,13 @@ const Cursor = () => {
             variants={variants}
             animate="default"
             transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
-        />
+        >
+            {/* <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" src="src/assets/images/cursor1.svg">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 4l-8 8 1.41 1.41L11 7.83V20h2V7.83l5.58 5.58L20 12l-8-8z" />
+            </svg> */}
+            <img src="src/assets/images/cursor2.png" />
+        </motion.div>
     );
 };
 

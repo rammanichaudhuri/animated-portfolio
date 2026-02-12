@@ -2,8 +2,8 @@ body {
     font-family: 'Pixelify Sans', sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: large;
-    cursor: none;
+    font-size: 1rem;
+    /* cursor: none; */
 }
 
 .navbar {
@@ -15,7 +15,7 @@ body {
     justify-content: end;
     align-items: start;
     width: 100vw;
-    cursor: none;
+    /* cursor: none; */
 }
 
 .navlinks {
@@ -29,7 +29,7 @@ body {
         display: flex;
         justify-content: center;
         gap: 2rem;
-        cursor: none;
+        /* cursor: none; */
     }
 
     .navbar {
@@ -41,7 +41,7 @@ body {
         padding: 40px;
         justify-content: center;
         width: 100%;
-        cursor: none;
+        /* cursor: none; */
     }
 
     #hamburger {

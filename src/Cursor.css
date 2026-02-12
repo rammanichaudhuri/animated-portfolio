@@ -1,13 +1,14 @@
 /* CustomCursor.css */
 .custom-cursor {
   position: fixed;
-  width: 24px;
-  height: 24px;
-  background-color: #ff89d4; /* Example color */
+  width: 40px;
+  height: 40px;
+  /* background-color: #ff89d4; Example color */
+  background-color: transparent;
   border-radius: 0;
   pointer-events: none; /* Allows clicks to pass through the cursor element */
   z-index: 9999;
-  mix-blend-mode: difference; /* Optional: creates an interesting color effect */
+  mix-blend-mode: difference; 
   /* Initially hide the default browser cursor for the entire page */
   /* You'd typically add a global CSS rule for the body element: */
   /* body { cursor: none; } */

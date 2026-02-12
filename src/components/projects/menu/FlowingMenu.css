@@ -33,7 +33,7 @@
   padding: 0 10vh;
   height: 100%;
   position: relative;
-  cursor: none;
+  /* cursor: none; */
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
@@ -66,16 +66,19 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .marquee__inner {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   height: 100%;
   width: fit-content;
   will-change: transform;
-  padding: 1rem;
+  padding: 2rem;
   gap: 1rem;
 }
 
