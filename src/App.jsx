@@ -42,7 +42,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className="App">
       {/* <div className='silk'>
         <Silk speed={5}
           scale={1}
@@ -73,7 +73,7 @@ function App() {
             </Transition>} />
         </Routes>
       </AnimatePresence>
-    </>
+    </div>
   );
 }
 
