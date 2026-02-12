@@ -228,7 +228,7 @@ function MenuItem({ link, text, descript, descriptn, timePeriod, image, speed, t
                 <>
                   <h2 className='modal-text' style={{ color: "black", justifySelf: "start" }}>
                     {item.link !== "" ?
-                      <span><a style={{ textDecoration: "underline" }} href={item.link}>{item.id}</a></span> :
+                      <span><a target="_blank" style={{ textDecoration: "underline" }} href={item.link}>{item.id}</a></span> :
                       <span>{item.id}</span>
                     }
                   </h2>
