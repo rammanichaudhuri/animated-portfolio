@@ -2,7 +2,6 @@ body {
     font-family: 'Pixelify Sans', sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1rem;
     /* cursor: none; */
 }
 
@@ -15,6 +14,7 @@ body {
     justify-content: end;
     align-items: start;
     width: 100vw;
+    font-size: 1.2rem;
     /* cursor: none; */
 }
 
