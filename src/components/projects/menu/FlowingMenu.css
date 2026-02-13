@@ -107,8 +107,8 @@
     text-align: start;
     align-items: start;
     gap: 0;
-    padding: 0.8rem 2rem;
-    font-size: small;
+    padding: 0.6rem 2rem;
+    font-size: x-small;
   }
 
   .marquee__inner {
