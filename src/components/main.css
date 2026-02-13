@@ -4,7 +4,7 @@ body {
 
 .container {
   display: flex;
-  overflow: auto;
+  overflow: hidden;
   position: relative;
   background-image: url('https://cdn.cosmos.so/0d3abf47-ebb3-4dfb-aa79-0ce908678a71?format=jpeg');
   background-size: cover;
@@ -67,6 +67,7 @@ body {
     grid-template-columns: 1.2fr 1fr;
     align-items: end;
     height: 100%;
+    overflow: auto;
     justify-content: end;
     padding-bottom: 50px;
     gap: 0.8rem;
