@@ -1,5 +1,5 @@
 body {
-  height: calc(100vh);
+  height: 100vh;
 }
 
 .container {
@@ -77,9 +77,8 @@ body {
     flex-direction: column;
     justify-content: end;
     gap: 0.8rem;
-    height: 100%;
-    margin-top: 3em;
-    padding-bottom: 6em;
+    padding-top: 3em;
+    padding-bottom: 4em;
     overflow: auto;
   }
 
@@ -102,9 +101,8 @@ body {
     flex-direction: column;
     justify-content: end;
     gap: 0.8rem;
-    height: 100%;
-    margin-top: 3em;
-    padding-bottom: 6em;
+    padding-top: 3em;
+    padding-bottom: 4em;
     overflow: auto;
   }
 

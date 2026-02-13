@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 
 import './FlowingMenu.css';
 import './Modal.css';
+import useDeviceSize from '../../useDeviceSize.jsx';
 
 const projects = [
   {
@@ -88,6 +89,8 @@ function MenuItem({ link, text, descript, descriptn, timePeriod, image, speed, t
   const [repetitions, setRepetitions] = useState(4);
   const [modal, setModal] = useState(false);
   const [modalContent, setModalContent] = useState(null);
+
+  const [deviceWidth, deviceHeight] = useDeviceSize();
 
   const openProjectModal = (id, action) => {
     if (action === "open") {
@@ -203,8 +206,8 @@ function MenuItem({ link, text, descript, descriptn, timePeriod, image, speed, t
       <a
         className="menu__item-link"
         href={link}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        onMouseEnter={deviceWidth >= "1500" ? handleMouseEnter : () => {}}
+        onMouseLeave={deviceWidth >= "1500" ? handleMouseLeave : () => {}}
         style={{ color: textColor, fontFamily: "Pixelify Sans" }}
         onClick={() => openProjectModal(text, 'open')}
       >
