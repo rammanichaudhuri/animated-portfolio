@@ -1,10 +1,10 @@
 body {
-  height: 100vh;
+  height: calc(100vh);
 }
 
 .container {
   display: flex;
-  overflow: hidden;
+  overflow: auto;
   background-image: url('https://cdn.cosmos.so/0d3abf47-ebb3-4dfb-aa79-0ce908678a71?format=jpeg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -77,7 +77,7 @@ body {
     gap: 0.2rem;
     overflow: auto;
     height: 100%;
-    padding-bottom: 2em;
+    margin-bottom: 2em;
   }
 
   .textbox {
@@ -112,6 +112,7 @@ body {
   .desc,
   .descp {
     font-size: small;
+    align-self: center;
   }
 
   .descp {
