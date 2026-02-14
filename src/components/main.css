@@ -80,18 +80,14 @@ body {
     padding-bottom: 2em;
   }
 
-  .textbox,
-  .desc,
-  .descp {
-    align-self: center;
-  }
-
   .textbox {
     font-size: 3rem;
     padding: 0;
+    align-self: center;
   }
 
   .descp {
+    margin: 2rem;
     margin-bottom: 5em;
   }
 }
