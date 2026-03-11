@@ -1,71 +1,107 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import './navbar.css';
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaBars, FaTimes } from 'react-icons/fa';
-import RevealText from "./RevealText";
 
-const initial = { y: 100, opacity: 1 };
-const animate = {
-    y: 0,
-    opacity: 1,
-    transition: {
-        duration: 0.7,
-        ease: [0.6, -0.05, 0.01, 0.99],
-        delay: 0.5
-    }
-};
+const NAV_LINKS = [
+    { to: '/', label: 'home', end: true },
+    { to: '/projects', label: 'work', end: false },
+    { to: '/about', label: 'about', end: false },
+    { to: '/contact', label: 'contact', end: false },
+];
 
 export const Navbar = () => {
-    const [navActive, setNavActive] = useState(false);
+    const [open, setOpen] = useState(false);
     const location = useLocation();
 
-    // Close mobile menu on route change
-    useEffect(() => {
-        setNavActive(false);
-    }, [location]);
+    useEffect(() => { setOpen(false); }, [location]);
 
     return (
         <>
-            <div className="navbar">
-                <motion.div
-                    className="navInner"
-                    initial={initial}
-                    animate={animate}
-                >
-                    <Link className="logo" to='/' />
-                    <nav className="navlinks">
-                        <NavLink to='/'><RevealText text={"home"} /></NavLink>
-                        <NavLink to='/projects'><RevealText text={"work"} /></NavLink>
-                        <NavLink to='/about'><RevealText text={"about"} /></NavLink>
-                        <NavLink to='/contact'><RevealText text={"contact"} /></NavLink>
-                    </nav>
-                </motion.div>
-                <button
-                    id="hamburger"
-                    aria-label={navActive ? "Close menu" : "Open menu"}
-                    onClick={() => setNavActive(v => !v)}
-                >
-                    {navActive ? <FaTimes size={22} color="white" /> : <FaBars size={22} color="white" />}
-                </button>
-            </div>
+            <header className="navbar">
+                <Link to="/" className="navbar-logo">
+                    rammani<span className="navbar-logo-dot">.</span>
+                </Link>
 
-            {/* Mobile overlay menu */}
+                <nav className="navbar-links" aria-label="main navigation">
+                    {NAV_LINKS.map(({ to, label, end }) => (
+                        <NavLink
+                            key={to}
+                            to={to}
+                            end={end}
+                            className={({ isActive }) =>
+                                `navbar-link${isActive ? ' navbar-link--active' : ''}`
+                            }
+                        >
+                            {label}
+                        </NavLink>
+                    ))}
+                </nav>
+
+                <a
+                    href="mailto:rammanititli@gmail.com"
+                    className="navbar-cta"
+                >
+                    get in touch →
+                </a>
+
+                <button
+                    className={`navbar-burger${open ? ' navbar-burger--open' : ''}`}
+                    onClick={() => setOpen(v => !v)}
+                    aria-label={open ? 'Close menu' : 'Open menu'}
+                    aria-expanded={open}
+                >
+                    <span />
+                    <span />
+                    <span />
+                </button>
+            </header>
+
             <AnimatePresence>
-                {navActive && (
+                {open && (
                     <motion.div
-                        className="mobileMenu"
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.25, ease: 'easeOut' }}
+                        className="navbar-mobile"
+                        initial={{ opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
+                        animate={{ opacity: 1, clipPath: 'inset(0 0 0% 0)' }}
+                        exit={{ opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
+                        transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
-                        <nav className="mobileNavLinks">
-                            <NavLink to='/'><RevealText text={"home"} /></NavLink>
-                            <NavLink to='/projects'><RevealText text={"work"} /></NavLink>
-                            <NavLink to='/about'><RevealText text={"about"} /></NavLink>
-                            <NavLink to='/contact'><RevealText text={"contact"} /></NavLink>
+                        <nav className="navbar-mobile-nav">
+                            {NAV_LINKS.map(({ to, label, end }, i) => (
+                                <motion.div
+                                    key={to}
+                                    initial={{ opacity: 0, y: 40 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.1 + i * 0.07, duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+                                >
+                                    <NavLink
+                                        to={to}
+                                        end={end}
+                                        className={({ isActive }) =>
+                                            `navbar-mobile-link${isActive ? ' navbar-mobile-link--active' : ''}`
+                                        }
+                                    >
+                                        <span className="navbar-mobile-num">0{i + 1}</span>
+                                        {label}
+                                    </NavLink>
+                                </motion.div>
+                            ))}
                         </nav>
+
+                        <motion.div
+                            className="navbar-mobile-footer"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.4 }}
+                        >
+                            <a href="mailto:rammanititli@gmail.com" className="navbar-mobile-email">
+                                rammanititli@gmail.com
+                            </a>
+                            <div className="navbar-mobile-socials">
+                                <a href="https://github.com/rammanichaudhuri" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <a href="https://linkedin.com/in/rammani-chaudhuri" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            </div>
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>

@@ -25,25 +25,46 @@ const skillGroups = [
 
 const About = () => {
     return (
-        <div className='containerAbout'>
-            <div className='subContainerAbout' style={{ width: '100vw' }}>
-                <div className='contentAbout'>
-                    <div className='headingAbout'>
-                        <h1>here's a little about me...</h1>
-                    </div>
-                    <div className='horizontalLineAbout'>
-                        <div className='description'>I'm a frontend developer with 2+ years of experience building web applications at Microsoft and Loop subscriptions. I love the intersection of engineering and design—making things that work beautifully and perform well too!</div>
-                        <div className='description'>My tech stack: React, TypeScript, Redux, Node.js, TailwindCSS, MongoDB, MySQL, with a recent focus on animations (GSAP) and design systems. I graduated from IIT BHU in Electrical Engineering in 2022, where competitive programming + building projects with friends taught me to solve problems efficiently along with teamwork. I still keep my DSA skills sharp by practicing regularly on LeetCode and Codeforces.</div>
-                        <div className='description'>Outside tech, I'm into writing, sketching portraits, devouring books, listening to podcasts, and working out. Always learning, always building!</div>
+        <div className="about">
+            <div className="about-overlay" />
+
+            <div className="about-body">
+                <div className="about-content">
+                    <h1 className="about-heading">
+                        here's a little<br />
+                        <span className="about-heading-accent">about me.</span>
+                    </h1>
+
+                    <div className="about-bio">
+                        <p>
+                            I'm a frontend developer with 2+ years of experience building web applications at{' '}
+                            <a href="https://www.microsoft.com/en-in/microsoft-viva/insights" target="_blank" rel="noopener noreferrer">
+                                Microsoft Viva Insights
+                            </a>{' '}
+                            and{' '}
+                            <a href="https://www.loopwork.co/" target="_blank" rel="noopener noreferrer">
+                                Loop
+                            </a>. I love the intersection of engineering and design — making things that work beautifully and perform well.
+                        </p>
+                        <p>
+                            My stack: React, TypeScript, Redux, Node.js, TailwindCSS, MongoDB, MySQL — with a focus on animations (GSAP) and design systems. I graduated from{' '}
+                            <a href="https://www.iitbhu.ac.in/" target="_blank" rel="noopener noreferrer">
+                                IIT BHU
+                            </a>{' '}
+                            in Electrical Engineering (2022), where competitive programming taught me to think fast and build smart.
+                        </p>
+                        <p>
+                            Outside tech: writing, sketching portraits, reading, podcasts, and working out. Always learning, always building!
+                        </p>
                     </div>
 
-                    <div className='skills-section'>
+                    <div className="about-skills">
                         {skillGroups.map((group) => (
-                            <div key={group.label} className='skills-group'>
-                                <span className='skills-group-label'>{group.label}</span>
-                                <div className='skills-chips'>
+                            <div key={group.label} className="skills-row">
+                                <span className="skills-row-label">{group.label}</span>
+                                <div className="skills-row-chips">
                                     {group.skills.map((skill) => (
-                                        <span key={skill} className='skill-chip'>{skill}</span>
+                                        <span key={skill} className="skill-chip">{skill}</span>
                                     ))}
                                 </div>
                             </div>
@@ -51,8 +72,8 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className='contactImageAbout'>
-                    <div style={{ width: 400, height: 400 }}>
+                <div className="about-image">
+                    <div style={{ width: 320, height: 380 }}>
                         <Stack
                             randomRotation={false}
                             sensitivity={200}
@@ -61,7 +82,7 @@ const About = () => {
                                 <img
                                     key={i}
                                     src={src}
-                                    alt={`card-${i + 1}`}
+                                    alt={`photo-${i + 1}`}
                                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                 />
                             ))}
@@ -74,6 +95,6 @@ const About = () => {
             </div>
         </div>
     );
-}
+};
 
 export default About;

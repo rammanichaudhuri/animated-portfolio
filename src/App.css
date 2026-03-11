@@ -1,22 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background: #ecc8e6;
+    background: #07030d;
     overflow: hidden;
     cursor: none !important;
-    height: calc(100vh);
+    height: 100vh;
     margin: 0;
     padding: 0;
-    padding-bottom: 2em;
+}
+
+a, button {
+    cursor: none;
 }
 
 .countUp {
-    background: transparent;
+    background: #07030d;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: rgb(248, 239, 239);
+    color: #ff89d4;
+    font-family: 'Pixelify Sans', sans-serif;
 }
-
 
 .slideIn {
     position: fixed;
@@ -24,7 +31,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: #ecc8e6;
+    background: #07030d;
     transform-origin: bottom;
     z-index: 9999;
 }
@@ -35,23 +42,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: #ecc8e6;
+    background: #07030d;
     transform-origin: top;
     z-index: 9999;
 }
-
-.silk {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-a {
-    cursor: none;
-}
-
-
-
-
