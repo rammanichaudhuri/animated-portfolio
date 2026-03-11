@@ -12,12 +12,7 @@
 .projects-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        140deg,
-        rgba(7, 3, 13, 0.85) 0%,
-        rgba(20, 6, 38, 0.72) 55%,
-        rgba(7, 3, 13, 0.8) 100%
-    );
+    background: rgba(236, 200, 230, 0.18);
     z-index: 1;
     pointer-events: none;
 }
@@ -36,7 +31,7 @@
 .projects-heading {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: clamp(1.4rem, 3.5vw, 2.4rem);
-    color: rgba(255, 255, 255, 0.85);
+    color: rgb(26, 19, 31);
     margin: 0;
     padding: 1.8rem 6vw 1rem;
     letter-spacing: -0.5px;
@@ -61,8 +56,8 @@
     align-items: center;
     gap: 2rem;
     padding: 0.75rem 6vw;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(7, 3, 13, 0.6);
+    border-top: 1px solid rgba(26, 19, 31, 0.12);
+    background: rgba(236, 200, 230, 0.55);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     flex-wrap: wrap;
@@ -95,7 +90,7 @@
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
-    color: #fff;
+    color: rgb(26, 19, 31);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -103,7 +98,7 @@
 .projects-edu-degree {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.72rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(26, 19, 31, 0.6);
 }
 
 .projects-edu-right {
@@ -116,14 +111,14 @@
 .projects-edu-period {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.45);
+    color: rgba(26, 19, 31, 0.45);
     white-space: nowrap;
 }
 
 .projects-edu-detail {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.65rem;
-    color: rgba(255, 255, 255, 0.38);
+    color: rgba(26, 19, 31, 0.38);
 }
 
 /* ── Responsive ── */

@@ -59,11 +59,11 @@ const Projects = () => {
                     <FlowingMenu
                         items={demoItems}
                         speed={15}
-                        textColor="#ffffff"
-                        bgColor="rgba(255,255,255,0.03)"
-                        marqueeBgColor="#ff89d4"
-                        marqueeTextColor="#07030d"
-                        borderColor="rgba(255,255,255,0.1)"
+                        textColor="#000000"
+                        bgColor="rgba(255,255,255,0.15)"
+                        marqueeBgColor="#ffffff"
+                        marqueeTextColor="#060010"
+                        borderColor="rgba(26,19,31,0.12)"
                     />
                 </div>
 

@@ -14,12 +14,7 @@
 .home-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        140deg,
-        rgba(7, 3, 13, 0.78) 0%,
-        rgba(20, 6, 35, 0.62) 55%,
-        rgba(7, 3, 13, 0.72) 100%
-    );
+    background: rgba(236, 200, 230, 0.18);
     z-index: 1;
     pointer-events: none;
 }
@@ -56,7 +51,7 @@
 .home-title {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: clamp(3.2rem, 8.5vw, 6.5rem);
-    color: #fff;
+    color: rgb(26, 19, 31);
     line-height: 1.05;
     letter-spacing: -2px;
     margin: 0 0 1.4rem;
@@ -69,21 +64,21 @@
 .home-bio {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: clamp(0.9rem, 1.4vw, 1.05rem);
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(26, 19, 31, 0.72);
     line-height: 1.75;
     margin: 0 0 2.5rem;
     max-width: 540px;
 }
 
 .home-bio strong {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgb(26, 19, 31);
     font-weight: 500;
 }
 
 .home-bio-link {
     color: #ff89d4;
     text-decoration: underline;
-    text-decoration-color: rgba(255, 137, 212, 0.45);
+    text-decoration-color: rgba(255, 137, 212, 0.5);
     text-underline-offset: 3px;
     transition: text-decoration-color 0.2s ease;
 }
@@ -112,7 +107,7 @@
 
 .btn--primary {
     background: #ff89d4;
-    color: #07030d;
+    color: rgb(26, 19, 31);
     border: 2px solid #ff89d4;
 }
 
@@ -123,8 +118,8 @@
 
 .btn--ghost {
     background: transparent;
-    color: rgba(255, 255, 255, 0.75);
-    border: 2px solid rgba(255, 255, 255, 0.25);
+    color: rgba(26, 19, 31, 0.75);
+    border: 2px solid rgba(26, 19, 31, 0.25);
 }
 
 .btn--ghost:hover {
@@ -135,8 +130,8 @@
 /* ── Stats bar ── */
 .home-stats {
     display: flex;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(7, 3, 13, 0.55);
+    border-top: 1px solid rgba(26, 19, 31, 0.12);
+    background: rgba(236, 200, 230, 0.55);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     flex-shrink: 0;
@@ -145,7 +140,7 @@
 .home-stat {
     flex: 1;
     padding: 0.9rem 2vw;
-    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    border-right: 1px solid rgba(26, 19, 31, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,14 +156,14 @@
     font-family: 'Pixelify Sans', sans-serif;
     font-size: clamp(1.1rem, 2.2vw, 1.6rem);
     font-weight: 700;
-    color: #fff;
+    color: rgb(26, 19, 31);
     line-height: 1;
 }
 
 .home-stat-label {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.56rem;
-    color: rgba(255, 255, 255, 0.45);
+    color: rgba(26, 19, 31, 0.5);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     white-space: pre-line;
@@ -188,7 +183,7 @@
 
     .home-stat {
         flex: 0 1 33.33%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        border-bottom: 1px solid rgba(26, 19, 31, 0.1);
     }
 }
 
@@ -210,8 +205,8 @@
 
     .home-stat {
         flex: unset;
-        border-right: 1px solid rgba(255, 255, 255, 0.08);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        border-right: 1px solid rgba(26, 19, 31, 0.1);
+        border-bottom: 1px solid rgba(26, 19, 31, 0.1);
         padding: 0.8rem;
     }
 

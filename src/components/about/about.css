@@ -12,12 +12,7 @@
 .about-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        140deg,
-        rgba(7, 3, 13, 0.82) 0%,
-        rgba(20, 6, 38, 0.68) 55%,
-        rgba(7, 3, 13, 0.75) 100%
-    );
+    background: rgba(236, 200, 230, 0.18);
     z-index: 1;
     pointer-events: none;
 }
@@ -45,7 +40,7 @@
 .about-heading {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: clamp(1.8rem, 4vw, 3rem);
-    color: #fff;
+    color: rgb(26, 19, 31);
     line-height: 1.15;
     margin: 0 0 1.5rem;
     letter-spacing: -1px;
@@ -66,7 +61,7 @@
 .about-bio p {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: clamp(0.82rem, 1.2vw, 0.95rem);
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(26, 19, 31, 0.72);
     line-height: 1.7;
     margin: 0;
 }
@@ -74,7 +69,7 @@
 .about-bio a {
     color: #ff89d4;
     text-decoration: underline;
-    text-decoration-color: rgba(255, 137, 212, 0.4);
+    text-decoration-color: rgba(255, 137, 212, 0.45);
     text-underline-offset: 3px;
     transition: text-decoration-color 0.2s ease;
 }
@@ -103,9 +98,9 @@
     font-size: 0.62rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: rgba(255, 255, 255, 0.5);
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(26, 19, 31, 0.55);
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(26, 19, 31, 0.18);
     border-radius: 4px;
     padding: 0.18rem 0.6rem;
     white-space: nowrap;
@@ -124,18 +119,18 @@
 .skill-chip {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.66rem;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(26, 19, 31, 0.15);
     border-radius: 20px;
     padding: 0.15rem 0.6rem;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(26, 19, 31, 0.8);
     white-space: nowrap;
     transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .skill-chip:hover {
-    background: rgba(255, 137, 212, 0.18);
-    border-color: rgba(255, 137, 212, 0.45);
+    background: rgba(255, 137, 212, 0.25);
+    border-color: rgba(255, 137, 212, 0.5);
     color: #ff89d4;
 }
 

@@ -10,17 +10,17 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 5vw;
-    background: rgba(7, 3, 13, 0.75);
+    background: rgba(236, 200, 230, 0.78);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    border-bottom: 1px solid rgba(26, 19, 31, 0.08);
 }
 
 /* Logo */
 .navbar-logo {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 1.1rem;
-    color: #fff;
+    color: rgb(26, 19, 31);
     text-decoration: none;
     letter-spacing: -0.5px;
     flex-shrink: 0;
@@ -40,7 +40,7 @@
 .navbar-link {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.82rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(26, 19, 31, 0.5);
     text-decoration: none;
     letter-spacing: 0.06em;
     position: relative;
@@ -60,7 +60,7 @@
 
 .navbar-link:hover,
 .navbar-link--active {
-    color: #fff;
+    color: rgb(26, 19, 31);
 }
 
 .navbar-link:hover::after,
@@ -74,7 +74,7 @@
     font-size: 0.75rem;
     color: #ff89d4;
     text-decoration: none;
-    border: 1px solid rgba(255, 137, 212, 0.4);
+    border: 1px solid rgba(255, 137, 212, 0.55);
     padding: 0.45rem 1.1rem;
     transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     letter-spacing: 0.04em;
@@ -83,7 +83,7 @@
 
 .navbar-cta:hover {
     background: #ff89d4;
-    color: #07030d;
+    color: #fff;
     border-color: #ff89d4;
 }
 
@@ -101,7 +101,7 @@
     display: block;
     width: 24px;
     height: 1.5px;
-    background: #fff;
+    background: rgb(26, 19, 31);
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform-origin: center;
 }
@@ -126,7 +126,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(7, 3, 13, 0.97);
+    background: rgba(236, 200, 230, 0.97);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     z-index: 99;
@@ -147,13 +147,13 @@
 .navbar-mobile-link {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: clamp(2rem, 9vw, 3.5rem);
-    color: rgba(255, 255, 255, 0.25);
+    color: rgba(26, 19, 31, 0.3);
     text-decoration: none;
     display: flex;
     align-items: baseline;
     gap: 1rem;
     padding: 0.55rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(26, 19, 31, 0.08);
     transition: color 0.2s ease;
     line-height: 1.1;
     overflow: hidden;
@@ -161,7 +161,7 @@
 
 .navbar-mobile-link:hover,
 .navbar-mobile-link--active {
-    color: #fff;
+    color: rgb(26, 19, 31);
 }
 
 .navbar-mobile-num {
@@ -181,7 +181,7 @@
 .navbar-mobile-email {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(26, 19, 31, 0.5);
     text-decoration: none;
     transition: color 0.2s ease;
 }
@@ -198,7 +198,7 @@
 .navbar-mobile-socials a {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(26, 19, 31, 0.35);
     text-decoration: none;
     transition: color 0.2s ease;
 }
