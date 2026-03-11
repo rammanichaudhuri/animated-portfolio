@@ -8,6 +8,16 @@ body {
     padding-bottom: 2em;
 }
 
+/* Restore real cursor on touch devices (desktop mode on mobile, tablets) */
+@media (pointer: coarse) {
+    body {
+        cursor: auto !important;
+    }
+    a {
+        cursor: pointer;
+    }
+}
+
 .countUp {
     background: transparent;
     display: flex;
@@ -49,7 +59,7 @@ body {
 }
 
 a {
-    cursor: none;
+    cursor: none; /* overridden to pointer on touch via media query above */
 }
 
 

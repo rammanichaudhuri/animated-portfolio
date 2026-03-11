@@ -60,7 +60,8 @@ body {
     color: #ffffff;
     text-decoration: none;
     position: relative;
-    /* Underline indicator drawn as ::after pseudo-element */
+    /* Padding gives a generous tap area — matters in desktop mode on touch */
+    padding: 8px 4px;
 }
 
 /* The pink underline: zero-width by default, expands on hover or active */
