@@ -10,38 +10,47 @@ body {
 }
 
 .containerAbout {
+    overflow: hidden;
     position: relative;
     background-image: url('https://cdn.cosmos.so/0d3abf47-ebb3-4dfb-aa79-0ce908678a71?format=jpeg');
     background-size: cover;
     background-repeat: no-repeat;
-    /* min-height instead of height so the container grows with its content,
-       letting the browser's native page scroll handle everything — text AND pictures */
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.silkAbout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .subContainerAbout {
-    /* position: relative (in-flow) so the container expands to fit all content.
-       Previously position: absolute + height: 100% locked it to exactly 100vh. */
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     background-color: transparent;
     display: grid;
-    grid-template-columns: 1fr 35vw;
+    grid-template-columns: 3fr;
     z-index: 1;
-    padding-bottom: 6em;
 }
 
 .contentAbout {
     margin-top: 4em;
-    padding-bottom: 5em;
 }
 
 .contactImageAbout {
     background-size: cover;
     padding: 0;
     margin: 6em 6em 2em 3em;
+    width: 30vw;
     grid-column: 2;
     display: flex;
     justify-content: center;
@@ -56,35 +65,9 @@ body {
 }
 
 .description {
-    padding-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
 }
 
-/* ── Skill tags ──────────────────────────────────────────────────────── */
-.skillsRow {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.55rem;
-    margin-top: 1.2rem;
-}
-
-.skillTag {
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 0.8rem;
-    padding: 0.25rem 0.65rem;
-    border: 1px solid #000000;
-    outline: 1px solid #000000;
-    outline-offset: 3px;
-    color: #000000;
-    background-color: transparent;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.skillTag:hover {
-    background-color: #000000;
-    color: #ffffff;
-}
-
-/* ── Responsive ──────────────────────────────────────────────────────── */
 @media screen and (max-width: 1024px) {
 
     .subContainerAbout {
@@ -92,10 +75,11 @@ body {
         flex-direction: column;
         justify-content: start;
         gap: 1rem;
+        height: 100%;
         align-items: center;
+        overflow: auto;
         padding-bottom: 6em;
         font-size: medium;
-        /* No overflow: auto here — page-level scroll handles it */
     }
 
     .headingAbout {
@@ -117,7 +101,5 @@ body {
         justify-content: start;
     }
 
-    .skillTag {
-        font-size: 0.72rem;
-    }
 }
+
