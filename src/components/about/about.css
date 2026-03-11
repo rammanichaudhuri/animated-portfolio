@@ -30,7 +30,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 35vw;
     z-index: 1;
-    padding-bottom: 3em;
+    padding-bottom: 6em;
 }
 
 .contentAbout {
