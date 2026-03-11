@@ -21,8 +21,8 @@ const Cursor = () => {
 
     const variants = {
         default: {
-            x: mousePosition.x - 12, // Subtract half of the cursor size (e.g., 24px width) to center it
-            y: mousePosition.y - 12,
+            x: mousePosition.x - 20,
+            y: mousePosition.y - 20,
             WebkitMaskPosition: `${mousePosition.x - (size / 2)}px ${mousePosition.y - (size / 2)}px`,
             WebkitMaskSize: `${size}px`,
         }
@@ -33,7 +33,7 @@ const Cursor = () => {
             className="custom-cursor"
             variants={variants}
             animate="default"
-            transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
+            transition={{ type: "spring", stiffness: 500, damping: 28 }}
         >
             {/* <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" src="src/assets/images/cursor1.svg">
                 <path d="M0 0h24v24H0z" fill="none" />

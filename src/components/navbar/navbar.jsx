@@ -1,6 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import './navbar.css';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import RevealText from "./RevealText";
@@ -14,8 +14,14 @@ const navLinks = [
 
 export const Navbar = () => {
     const [navActive, setNavActive] = useState(false);
+    const location = useLocation();
 
     const closeNav = () => setNavActive(false);
+
+    // Close mobile menu whenever the route changes (e.g. browser back/forward)
+    useEffect(() => {
+        closeNav();
+    }, [location.pathname]);
 
     return (
         <div className="navbar">

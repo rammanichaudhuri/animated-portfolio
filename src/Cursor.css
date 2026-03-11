@@ -3,13 +3,15 @@
   position: fixed;
   width: 40px;
   height: 40px;
-  /* background-color: #ff89d4; Example color */
   background-color: transparent;
   border-radius: 0;
-  pointer-events: none; /* Allows clicks to pass through the cursor element */
+  pointer-events: none;
   z-index: 9999;
-  mix-blend-mode: difference; 
-  /* Initially hide the default browser cursor for the entire page */
-  /* You'd typically add a global CSS rule for the body element: */
-  /* body { cursor: none; } */
+}
+
+/* Hide custom cursor on touch devices — it's irrelevant and can get stuck */
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none;
+  }
 }

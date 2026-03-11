@@ -114,6 +114,9 @@ body {
     color: #ffffff;
     text-decoration: none;
     padding: 0.85rem 1.5rem;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     transition: color 0.2s ease, background-color 0.2s ease;
 }
@@ -132,10 +135,18 @@ body {
     background-color: rgba(255, 137, 212, 0.08);
 }
 
+/* ── Tablet (768px–1023px): tune mobile menu spacing ────────────────── */
+@media screen and (max-width: 767px) {
+    .nav-item-mobile {
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
+    }
+}
+
 /* ── Desktop overrides ───────────────────────────────────────────────── */
 @media screen and (min-width: 1024px) {
     .navbar-inner {
-        padding: 20px 60px;
+        padding: 20px 40px;
     }
 
     .navlinks-desktop {
@@ -151,5 +162,12 @@ body {
        (AnimatePresence handles it, but safety guard) */
     .navlinks-mobile {
         display: none !important;
+    }
+}
+
+/* ── Larger desktop: more breathing room ────────────────────────────── */
+@media screen and (min-width: 1440px) {
+    .navbar-inner {
+        padding: 20px 60px;
     }
 }
