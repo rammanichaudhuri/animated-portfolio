@@ -92,6 +92,29 @@ body {
   }
 }
 
+/* ── Achievement stat chips ──────────────────────────────────────────── */
+/* Surfaces key highlights so scanners don't miss them in the paragraph */
+.statsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.statChip {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 0.78rem;
+  padding: 0.25rem 0.7rem;
+  /* Inherits the site's border + outline-offset design language */
+  border: 1px solid black;
+  outline: 1px solid black;
+  outline-offset: 3px;
+  color: black;
+  background-color: transparent;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+}
+
 @media screen and (max-width: 600px) {
 
   .subContainer {
@@ -118,5 +141,9 @@ body {
   .descp {
     margin: 2rem;
     margin-bottom: 7em;
+  }
+
+  .statChip {
+    font-size: 0.7rem;
   }
 }

@@ -2,57 +2,154 @@ body {
     font-family: 'Pixelify Sans', sans-serif;
     font-weight: 400;
     font-style: normal;
-    /* cursor: none; */
 }
 
+/* ── Outer wrapper — full width, fixed at top ───────────────────────── */
 .navbar {
     position: fixed;
-    z-index: 10;
-    color: rgb(255, 255, 255);
-    display: flex;
-    padding: 10px;
-    justify-content: end;
-    align-items: start;
-    width: 100vw;
-    font-size: 1.2rem;
-    /* cursor: none; */
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
-.navlinks {
+/* ── Inner bar — holds logo + nav + hamburger ───────────────────────── */
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    /* Glassmorphism: blurs the background image beneath the bar so text
+       stays readable regardless of what image is behind it */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.18);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ── Logo ────────────────────────────────────────────────────────────── */
+.logo {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: -1px;
+    transition: color 0.2s ease;
+    line-height: 1;
+    /* Prevent it from shrinking if nav items are wide */
+    flex-shrink: 0;
+}
+
+.logo:hover {
+    color: #ff89d4;
+}
+
+/* ── Desktop nav ─────────────────────────────────────────────────────── */
+.navlinks-desktop {
+    /* Hidden on mobile — shown via media query below */
     display: none;
-    justify-content: center;
+    gap: 2.5rem;
     align-items: center;
 }
 
+/* Each nav link wrapper */
+.nav-item {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    /* Underline indicator drawn as ::after pseudo-element */
+}
+
+/* The pink underline: zero-width by default, expands on hover or active */
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff89d4;
+    transition: width 0.3s ease;
+}
+
+/* Active route: full-width pink underline — tells user "you are here" */
+.nav-item.active::after {
+    width: 100%;
+}
+
+/* Hover: also show the underline */
+.nav-item:hover::after {
+    width: 100%;
+}
+
+/* ── Hamburger button ───────────────────────────────────────────────── */
+#hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Shows on mobile, hidden on desktop via media query */
+}
+
+/* ── Mobile dropdown menu ────────────────────────────────────────────── */
+.navlinks-mobile {
+    display: flex;
+    flex-direction: column;
+    /* Dark frosted glass — consistent with the bar above */
+    background-color: rgba(10, 5, 15, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-item-mobile {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.85rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-item-mobile:last-child {
+    border-bottom: none;
+}
+
+/* Active mobile link: pink text highlight */
+.nav-item-mobile.active {
+    color: #ff89d4;
+}
+
+.nav-item-mobile:hover {
+    color: #ff89d4;
+    background-color: rgba(255, 137, 212, 0.08);
+}
+
+/* ── Desktop overrides ───────────────────────────────────────────────── */
 @media screen and (min-width: 1024px) {
-    .navlinks {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        /* cursor: none; */
+    .navbar-inner {
+        padding: 20px 60px;
     }
 
-    .navbar {
-        position: fixed;
-        z-index: 10;
-        background: transparent;
-        color: rgb(255, 255, 255);
+    .navlinks-desktop {
         display: flex;
-        padding: 40px;
-        justify-content: center;
-        width: 100%;
-        /* cursor: none; */
     }
 
+    /* Hide hamburger on desktop */
     #hamburger {
         display: none;
     }
-}
 
-.navactive {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    z-index: 10;
-        /* Shown when toggled */
+    /* Mobile menu should never render on desktop
+       (AnimatePresence handles it, but safety guard) */
+    .navlinks-mobile {
+        display: none !important;
+    }
 }

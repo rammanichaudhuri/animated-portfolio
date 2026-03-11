@@ -1,27 +1,20 @@
 import './contact.css';
-import Silk from '../Silk';
 import PixelTransition from './PixelTransition';
 
 const Contact = () => {
     return (
         <div className='containerContact'>
-            {/* <div className='silkContact'>
-                <Silk
-                    speed={5}
-                    scale={1}
-                    color="#7B7481"
-                    noiseIntensity={1.5}
-                    rotation={0}
-                />
-            </div> */}
             <div className='subContainerContact' style={{ width: '100vw' }}>
                 <div className='content'>
                     <div className='headingContact'>
                         <h1>we should talk! send me a message.</h1>
                     </div>
-                    <div className='horizontalLine' style={{  }}>
-                        <div>Email: </div>
-                        <div>rammanititli@gmail.com</div>
+                    {/* Email — clickable mailto: link so visitors can open their mail client directly */}
+                    <div className='horizontalLine'>
+                        <div>Email:</div>
+                        <a href="mailto:rammanititli@gmail.com" style={{ color: "white" }}>
+                            rammanititli@gmail.com
+                        </a>
                     </div>
                     <div className='horizontalLine'>
                         <div>LinkedIn:</div>

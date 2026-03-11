@@ -36,10 +36,11 @@ body {
     width: 100%;
     height: 100%;
     background-color: transparent;
-    display: flex;
     z-index: 1;
+    /* Fixed: was "2fr" (single column) — needs two columns so the
+       pixel-transition image actually sits beside the contact links */
     display: grid;
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr 32vw;
 }
 
 .content {

@@ -17,17 +17,8 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
     display: flex;
     align-items: center;
-}
-
-.silkAbout {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
 
 .subContainerAbout {
@@ -37,20 +28,23 @@ body {
     width: 100%;
     height: 100%;
     background-color: transparent;
+    /* Fixed: was "3fr" (single column) — now an explicit two-column grid
+       so the card stack sits properly beside the text, not in an implicit track */
     display: grid;
-    grid-template-columns: 3fr;
+    grid-template-columns: 1fr 35vw;
     z-index: 1;
 }
 
 .contentAbout {
     margin-top: 4em;
+    overflow-y: auto;
 }
 
 .contactImageAbout {
     background-size: cover;
     padding: 0;
     margin: 6em 6em 2em 3em;
-    width: 30vw;
+    /* Column 2 — right side, next to the text */
     grid-column: 2;
     display: flex;
     justify-content: center;
@@ -65,12 +59,40 @@ body {
 }
 
 .description {
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.8rem;
 }
 
+/* ── Skill tags ──────────────────────────────────────────────────────── */
+/* Visual representation of the tech stack — scannable at a glance      */
+.skillsRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 1.2rem;
+}
+
+.skillTag {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.65rem;
+    border: 1px solid #000000;
+    outline: 1px solid #000000;
+    outline-offset: 3px;
+    color: #000000;
+    background-color: transparent;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.skillTag:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
 @media screen and (max-width: 1024px) {
 
     .subContainerAbout {
+        /* Collapse to single column on tablet/mobile */
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -101,5 +123,7 @@ body {
         justify-content: start;
     }
 
+    .skillTag {
+        font-size: 0.72rem;
+    }
 }
-

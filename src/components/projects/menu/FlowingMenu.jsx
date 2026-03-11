@@ -209,7 +209,11 @@ function MenuItem({ link, text, descript, descriptn, timePeriod, image, speed, t
         onMouseEnter={deviceWidth >= "1500" ? handleMouseEnter : () => {}}
         onMouseLeave={deviceWidth >= "1500" ? handleMouseLeave : () => {}}
         style={{ color: textColor, fontFamily: "Pixelify Sans" }}
-        onClick={() => openProjectModal(text, 'open')}
+        onClick={(e) => {
+          // Prevent href="#" from scrolling the page to the top
+          e.preventDefault();
+          openProjectModal(text, 'open');
+        }}
       >
         <div>{text}</div>
         <div>{descript}</div>
