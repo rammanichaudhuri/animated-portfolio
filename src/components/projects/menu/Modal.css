@@ -1,72 +1,88 @@
 .modal-overlay {
   position: fixed;
-  /* Fixed position to cover the entire screen */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: transparent;
-  /* Semi-transparent black background */
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  /* Ensure it's on top of other content */
+  padding: 1rem;
 }
 
 .modal-content {
   background: rgb(252, 237, 255);
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 50rem;
-  margin-top: 100px;
-  height: fit-content;
-  width: 80%;
+  padding: 2.5em;
+  border-radius: 12px;
+  max-width: 52rem;
+  width: 88%;
+  max-height: 80vh;
   position: relative;
-  overflow: auto;
-  padding: 2em;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
-/* .modal-text {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: black;
-  height: 200px;
-  width: 200px;
-} */
+.modal-text {
+  font-family: 'Pixelify Sans', sans-serif;
+  color: #000;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.modal-text h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.modal-text li {
+  text-align: start;
+  margin-bottom: 0.6rem;
+  list-style: disc;
+  margin-left: 1.2rem;
+}
 
 .modal-close-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 14px;
+  right: 14px;
   cursor: pointer;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  transition: background 0.2s ease;
+}
+
+.modal-close-button:hover {
+  background: rgba(255, 137, 212, 0.4);
 }
 
 @media screen and (max-width: 1024px) {
   .modal-content {
-    background: rgb(252, 237, 255);
     font-size: small;
-    border-radius: 8px;
-    max-width: 50rem;
-    height: fit-content;
-    width: 90%;
-    position: relative;
-    overflow: auto;
+    width: 92%;
     padding: 2em;
   }
 }
 
 @media screen and (max-width: 600px) {
   .modal-content {
-    background: rgb(252, 237, 255);
     font-size: x-small;
-    border-radius: 8px;
-    max-width: 50rem;
-    height: fit-content;
-    width: 90%;
-    position: relative;
-    overflow: auto;
-    padding: 2em;
+    width: 95%;
+    padding: 1.5em;
+    max-height: 85vh;
+  }
+
+  .modal-text {
+    font-size: 0.75rem;
   }
 }

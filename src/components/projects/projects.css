@@ -1,8 +1,9 @@
 .headingProject {
     margin-top: 4em;
-    padding: 5vh 10vh;
+    padding: 4vh 10vh 2vh;
     font-size: 4vh;
     color: #ffffff;
+    flex-shrink: 0;
 }
 
 body {
@@ -11,16 +12,15 @@ body {
 }
 
 .containerProject {
-    overflow: hidden;
     position: relative;
     background-image: url('https://cdn.cosmos.so/0d3abf47-ebb3-4dfb-aa79-0ce908678a71?format=jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .subContainerProject {
@@ -31,52 +31,183 @@ body {
     height: 100%;
     background-color: transparent;
     display: flex;
-    align-items: start;
+    align-items: stretch;
     justify-content: start;
     z-index: 1;
-    display: flex;
-    padding-bottom: 2em;
     flex-direction: column;
+    overflow-y: auto;
+    padding-bottom: 2em;
 }
 
+/* The FlowingMenu wrapper — fills available space between heading and education */
+.menuOuter {
+    flex: 1;
+    position: relative;
+    min-height: 260px;
+    overflow: hidden;
+}
+
+/* ── Education section ── */
+.educationSection {
+    flex-shrink: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem 10vh 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.educationHeading {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.educationList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.educationItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+.educationItem:last-child {
+    border-bottom: none;
+}
+
+.edu-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.edu-institution {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.edu-degree {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.edu-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.15rem;
+    text-align: right;
+}
+
+.edu-period {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.edu-detail {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 28rem;
+    text-align: right;
+}
+
+/* ── Responsive ── */
 @media screen and (max-width: 1700px) {
 
     .subContainerProject {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        gap: 0.8rem;
-        margin-top: 3em;
-        height: 100%;
-        padding-bottom: 6em;
-        overflow: auto;
+        overflow-y: auto;
     }
 
-    /* .headingProject {
-        margin-left: 2rem;
-        padding: 0;
-        width: 75%;
-    } */
+    .menuOuter {
+        min-height: 280px;
+    }
 
 }
 
 @media screen and (max-width: 1024px) {
 
     .subContainerProject {
-        display: flex;
-        flex-direction: column;
         justify-content: start;
-        gap: 0.8rem;
-        margin-top: 3em;
-        height: 100%;
-        padding-bottom: 6em;
-        overflow: auto;
+        overflow-y: auto;
+        padding-bottom: 5em;
     }
 
     .headingProject {
-        margin-left: 2rem;
-        padding: 0;
-        width: 75%;
+        margin-top: 1rem;
+        padding: 0 1.5rem 1rem;
+        width: calc(100% - 3rem);
+    }
+
+    .menuOuter {
+        min-height: 340px;
+        flex: none;
+        height: auto;
+    }
+
+    .educationSection {
+        padding: 1rem 1.5rem 1.5rem;
+    }
+
+    .educationItem {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .edu-right {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .edu-detail {
+        text-align: left;
+        max-width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .headingProject {
+        font-size: 3vh;
+        padding: 0 1rem 0.8rem;
+        width: calc(100% - 2rem);
+    }
+
+    .menuOuter {
+        min-height: 360px;
+    }
+
+    .educationSection {
+        padding: 0.8rem 1rem 1.2rem;
+    }
+
+    .educationHeading {
+        font-size: 0.8rem;
+    }
+
+    .edu-institution {
+        font-size: 0.95rem;
+    }
+
+    .edu-degree,
+    .edu-period,
+    .edu-detail {
+        font-size: 0.65rem;
     }
 
 }

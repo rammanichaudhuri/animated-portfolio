@@ -7,10 +7,10 @@ body {
     padding: 5vh 10vh;
     font-size: 4vh;
     color: #ffffff;
+    line-height: 1.2;
 }
 
 .containerContact {
-    overflow: hidden;
     position: relative;
     background-image: url('https://cdn.cosmos.so/0d3abf47-ebb3-4dfb-aa79-0ce908678a71?format=jpeg');
     background-size: cover;
@@ -19,6 +19,7 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .silkContact {
@@ -36,14 +37,64 @@ body {
     width: 100%;
     height: 100%;
     background-color: transparent;
-    display: flex;
     z-index: 1;
     display: grid;
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr 340px;
+    align-items: start;
+    overflow-y: auto;
 }
 
 .content {
     margin-top: 4em;
+}
+
+.contactLinks {
+    margin: 0 10vh;
+}
+
+.horizontalLine {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5vh 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    gap: 1rem;
+}
+
+.horizontalLine:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.contactLabel {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #000;
+    min-width: 5rem;
+}
+
+.contactValue {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contactValue:hover {
+    color: #ff89d4;
+    text-decoration: underline;
+}
+
+.contactNote {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 1.5rem 10vh 0;
+    font-style: italic;
 }
 
 .contactImage {
@@ -52,50 +103,90 @@ body {
     outline: 5px solid #ff89d4;
     outline-offset: 4px;
     padding: 0;
-    margin: 6em 6em 2em 3em;
-    width: 30vw;
+    margin: 6em 3em 2em 2em;
+    width: auto;
     grid-column: 2;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky;
+    top: 5em;
+    height: 300px;
 }
 
-.horizontalLine {
-    padding: 2vh 0;
-    font-size: 1.2rem;
-    margin: 0 10vh;
-    border-bottom: rgb(0, 0, 0) solid 1px;
-    color: #000000;
-}
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1240px) {
 
     .subContainerContact {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: start;
         align-items: start;
         height: 100%;
-        gap: 1rem;
+        gap: 0.5rem;
         padding-bottom: 6em;
-        overflow: auto;
+        overflow-y: auto;
     }
 
     .headingContact {
-        margin-left: 2rem;
+        margin-top: 4rem;
+        margin-left: 1.5rem;
         padding: 0;
-        width: 75%;
+        width: 88%;
     }
 
-    .horizontalLine {
-        margin-left: 2rem;
-        padding: 0;
-        width: 75%;
+    .contactLinks {
+        margin: 0 1.5rem;
+        width: calc(100% - 3rem);
+    }
+
+    .contactNote {
+        margin: 1rem 1.5rem 0;
+        width: calc(100% - 3rem);
     }
 
     .contactImage {
-        margin: 2em;
-        width: 85%;
+        margin: 1.5rem;
+        width: calc(100% - 3rem);
+        position: static;
+        height: 260px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .headingContact {
+        margin-left: 1rem;
+        width: calc(100% - 2rem);
+        font-size: 3.5vh;
+    }
+
+    .contactLinks {
+        margin: 0 1rem;
+        width: calc(100% - 2rem);
+    }
+
+    .horizontalLine {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.8vh 0;
+        gap: 0.2rem;
+    }
+
+    .contactValue {
+        font-size: 0.85rem;
+    }
+
+    .contactNote {
+        margin: 0.8rem 1rem 0;
+        width: calc(100% - 2rem);
+        font-size: 0.75rem;
+    }
+
+    .contactImage {
+        margin: 1rem;
+        width: calc(100% - 2rem);
+        height: 220px;
     }
 
 }

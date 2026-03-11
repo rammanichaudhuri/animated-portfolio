@@ -57,7 +57,7 @@ function FlowingMenu({
   items = [],
   speed = 15,
   textColor = 'rgb(0, 0, 0)',
-  bgColor = transparent,
+  bgColor = 'transparent',
   marqueeBgColor = 'rgb(255, 255, 255)',
   marqueeTextColor = '#060010',
   borderColor = 'rgb(0, 0, 0)'

@@ -10,16 +10,15 @@ body {
 }
 
 .containerAbout {
-    overflow: hidden;
     position: relative;
     background-image: url('https://cdn.cosmos.so/0d3abf47-ebb3-4dfb-aa79-0ce908678a71?format=jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .silkAbout {
@@ -38,68 +37,180 @@ body {
     height: 100%;
     background-color: transparent;
     display: grid;
-    grid-template-columns: 3fr;
+    grid-template-columns: 1fr 380px;
     z-index: 1;
+    overflow-y: auto;
 }
 
 .contentAbout {
     margin-top: 4em;
+    padding-right: 1rem;
+    overflow-y: auto;
 }
 
 .contactImageAbout {
     background-size: cover;
     padding: 0;
-    margin: 6em 6em 2em 3em;
-    width: 30vw;
+    margin: 5em 2em 2em 1em;
+    width: auto;
     grid-column: 2;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 1rem;
+    position: sticky;
+    top: 5em;
+    height: fit-content;
 }
 
 .horizontalLineAbout {
     padding: 2vh 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0 10vh;
     color: #000000;
+    line-height: 1.6;
 }
 
 .description {
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.8rem;
 }
 
-@media screen and (max-width: 1024px) {
+/* ── Skills section ── */
+.skills-section {
+    margin: 0.5rem 10vh 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.skills-group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.skills-group-label {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #000;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    padding: 0.2rem 0.6rem;
+    white-space: nowrap;
+    min-width: 7.5rem;
+    text-align: center;
+    align-self: center;
+}
+
+.skills-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    flex: 1;
+}
+
+.skill-chip {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 0.72rem;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    border-radius: 20px;
+    padding: 0.18rem 0.65rem;
+    color: #000;
+    white-space: nowrap;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-chip:hover {
+    background: rgba(255, 137, 212, 0.45);
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 1240px) {
 
     .subContainerAbout {
         display: flex;
         flex-direction: column;
         justify-content: start;
-        gap: 1rem;
+        gap: 0.5rem;
         height: 100%;
         align-items: center;
-        overflow: auto;
+        overflow-y: auto;
         padding-bottom: 6em;
-        font-size: medium;
     }
 
     .headingAbout {
-        margin-left: 2rem;
+        margin-left: 1.5rem;
         padding: 0;
-        width: 75%;
+        width: 88%;
+        margin-top: 5rem;
     }
 
     .horizontalLineAbout {
-        margin-left: 2rem;
-        padding: 0;
-        width: 75%;
+        margin: 0 1.5rem;
+        padding: 1rem 0;
+        width: calc(100% - 3rem);
+        font-size: 1rem;
+    }
+
+    .skills-section {
+        margin: 0.5rem 1.5rem 1.5rem;
+        width: calc(100% - 3rem);
+    }
+
+    .skills-group {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .skills-group-label {
+        min-width: auto;
+        width: fit-content;
     }
 
     .contactImageAbout {
-        margin: 1em;
+        margin: 0.5rem;
         width: 85%;
         align-self: start;
         justify-content: start;
+        position: static;
     }
 
 }
 
+@media screen and (max-width: 600px) {
+
+    .headingAbout {
+        margin-left: 1rem;
+        width: calc(100% - 2rem);
+        font-size: 3vh;
+    }
+
+    .horizontalLineAbout {
+        margin: 0 1rem;
+        padding: 0.8rem 0;
+        width: calc(100% - 2rem);
+        font-size: small;
+    }
+
+    .skills-section {
+        margin: 0.5rem 1rem 1rem;
+        width: calc(100% - 2rem);
+    }
+
+    .skill-chip {
+        font-size: 0.62rem;
+        padding: 0.15rem 0.5rem;
+    }
+
+    .contactImageAbout {
+        margin: 0.5rem 1rem;
+        width: calc(100% - 2rem);
+    }
+
+}
