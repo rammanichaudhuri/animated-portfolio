@@ -40,7 +40,7 @@ body {
     /* Fixed: was "2fr" (single column) — needs two columns so the
        pixel-transition image actually sits beside the contact links */
     display: grid;
-    grid-template-columns: 1fr 32vw;
+    grid-template-columns: 2fr 30vw;
 }
 
 .content {
