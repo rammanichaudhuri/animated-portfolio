@@ -37,10 +37,8 @@ body {
     height: 100%;
     background-color: transparent;
     z-index: 1;
-    /* Fixed: was "2fr" (single column) — needs two columns so the
-       pixel-transition image actually sits beside the contact links */
     display: grid;
-    grid-template-columns: 2fr 30vw;
+    grid-template-columns: 2fr;
 }
 
 .content {
