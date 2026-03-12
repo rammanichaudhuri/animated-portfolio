@@ -44,7 +44,7 @@
     font-size: 0.72rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: #ff89d4;
+    color: #ffffff;
     margin: 0 0 1.1rem;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .home-title-name {
-    color: #ff89d4;
+    color: #ffffff;
 }
 
 .home-bio {
@@ -76,7 +76,7 @@
 }
 
 .home-bio-link {
-    color: #ff89d4;
+    color: #ffffff;
     text-decoration: underline;
     text-decoration-color: rgba(255, 137, 212, 0.5);
     text-underline-offset: 3px;
@@ -84,7 +84,7 @@
 }
 
 .home-bio-link:hover {
-    text-decoration-color: #ff89d4;
+    text-decoration-color: #ffffff;
 }
 
 /* ── CTA buttons ── */
@@ -106,14 +106,14 @@
 }
 
 .btn--primary {
-    background: #ff89d4;
+    background: #ffffff;
     color: rgb(26, 19, 31);
-    border: 2px solid #ff89d4;
+    border: 2px solid #ffffff;
 }
 
 .btn--primary:hover {
     background: transparent;
-    color: #ff89d4;
+    color: #ffffff;
 }
 
 .btn--ghost {
@@ -123,8 +123,8 @@
 }
 
 .btn--ghost:hover {
-    border-color: #ff89d4;
-    color: #ff89d4;
+    border-color: #ffffff;
+    color: #ffffff;
 }
 
 /* ── Responsive ── */

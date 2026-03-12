@@ -47,7 +47,7 @@
 }
 
 .about-heading-accent {
-    color: #ff89d4;
+    color: #ffffff;
 }
 
 /* Bio paragraphs */
@@ -67,7 +67,7 @@
 }
 
 .about-bio a {
-    color: #ff89d4;
+    color: #ffffff;
     text-decoration: underline;
     text-decoration-color: rgba(255, 137, 212, 0.45);
     text-underline-offset: 3px;
@@ -75,7 +75,7 @@
 }
 
 .about-bio a:hover {
-    text-decoration-color: #ff89d4;
+    text-decoration-color: #ffffff;
 }
 
 /* ── Skills ── */
@@ -131,7 +131,7 @@
 .skill-chip:hover {
     background: rgba(255, 137, 212, 0.25);
     border-color: rgba(255, 137, 212, 0.5);
-    color: #ff89d4;
+    color: #ffffff;
 }
 
 /* ── Right image ── */
