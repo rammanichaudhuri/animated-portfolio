@@ -1,13 +1,5 @@
 import { Link } from 'react-router-dom';
-import CountUp from '../CountUp';
 import './main.css';
-
-const stats = [
-    { value: 2, suffix: '+', label: 'years\nexperience' },
-    { value: 5, suffix: '', label: 'features\nshipped' },
-    { value: 25, suffix: '%', label: 'engagement\nuplifted' },
-    { value: 100, suffix: '+', label: 'prod issues\nresolved' },
-];
 
 const HomePage = () => {
     return (
@@ -62,21 +54,7 @@ const HomePage = () => {
                     </div>
                 </div>
 
-                <div className="home-stats">
-                    {stats.map((s, i) => (
-                        <div key={i} className="home-stat">
-                            <span className="home-stat-value">
-                                <CountUp from={0} to={s.value} duration={1.4} separator="," />
-                                {s.suffix}
-                            </span>
-                            <span className="home-stat-label">{s.label}</span>
-                        </div>
-                    ))}
-                    <div className="home-stat">
-                        <span className="home-stat-value">IIT</span>
-                        <span className="home-stat-label">BHU · EE · '22</span>
-                    </div>
-                </div>
+
             </div>
         </div>
     );
