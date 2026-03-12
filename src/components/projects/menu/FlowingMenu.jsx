@@ -19,7 +19,7 @@ const projects = [
     ]
   },
   {
-    id: "Microsoft",
+    id: "Microsoft Viva Insights",
     link: "https://www.microsoft.com/en-in/microsoft-viva/insights",
     projectDesc: [
       "Contributed to the successful launch of 5 MAJOR features, independently leading the development of 2, for the advanced Viva Insights App, which provides tools for analyzing how an organization gets work done and reporting custom analysis to the company’s leaders.",
@@ -209,7 +209,7 @@ function MenuItem({ link, text, descript, descriptn, timePeriod, image, speed, t
         onMouseEnter={deviceWidth >= "1500" ? handleMouseEnter : () => {}}
         onMouseLeave={deviceWidth >= "1500" ? handleMouseLeave : () => {}}
         style={{ color: textColor, fontFamily: "Pixelify Sans" }}
-        onClick={() => openProjectModal(text, 'open')}
+        onClick={(e) => { e.preventDefault(); openProjectModal(text, 'open'); }}
       >
         <div>{text}</div>
         <div>{descript}</div>
