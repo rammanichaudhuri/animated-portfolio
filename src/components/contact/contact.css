@@ -41,7 +41,7 @@
     font-size: 0.7rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: #ff89d4;
+    color: #ffffff;
     margin: 0 0 1rem;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .contact-heading-accent {
-    color: #ff89d4;
+    color: #ffffff;
 }
 
 /* ── Contact links ── */
@@ -84,12 +84,12 @@
 }
 
 .contact-link:hover .contact-link-display {
-    color: #ff89d4;
+    color: #ffffff;
 }
 
 .contact-link:hover .contact-link-icon {
     transform: translate(3px, -3px);
-    color: #ff89d4;
+    color: #ffffff;
 }
 
 .contact-link-label {
@@ -139,7 +139,7 @@
     width: 100% !important;
     height: 320px !important;
     border: 2px solid rgb(26, 19, 31);
-    outline: 5px solid #ff89d4;
+    outline: 5px solid #ffffff;
     outline-offset: 4px;
 }
 

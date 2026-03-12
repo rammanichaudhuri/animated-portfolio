@@ -1,24 +1,25 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 import './Cursor.css';
 
 const Cursor = () => {
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const rawX = useMotionValue(-100);
+    const rawY = useMotionValue(-100);
+
+    const x = useSpring(rawX, { stiffness: 180, damping: 22, mass: 0.4 });
+    const y = useSpring(rawY, { stiffness: 180, damping: 22, mass: 0.4 });
 
     useEffect(() => {
-        const handleMouseMove = (e) => {
-            setMousePosition({ x: e.clientX, y: e.clientY });
+        const move = (e) => {
+            rawX.set(e.clientX - 12);
+            rawY.set(e.clientY - 12);
         };
-        document.addEventListener('mousemove', handleMouseMove);
-        return () => document.removeEventListener('mousemove', handleMouseMove);
-    }, []);
+        document.addEventListener('mousemove', move);
+        return () => document.removeEventListener('mousemove', move);
+    }, [rawX, rawY]);
 
     return (
-        <motion.div
-            className="custom-cursor"
-            animate={{ x: mousePosition.x - 12, y: mousePosition.y - 12 }}
-            transition={{ type: 'tween', ease: 'backOut', duration: 0.5 }}
-        >
+        <motion.div className="custom-cursor" style={{ x, y }}>
             <img src="/cursor2.png" alt="" />
         </motion.div>
     );

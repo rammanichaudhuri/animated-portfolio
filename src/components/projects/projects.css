@@ -39,7 +39,7 @@
 }
 
 .projects-heading-accent {
-    color: #ff89d4;
+    color: #ffffff;
 }
 
 /* ── Menu ── */
@@ -68,7 +68,7 @@
     font-size: 0.6rem;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: #ff89d4;
+    color: #ffffff;
     flex-shrink: 0;
 }
 

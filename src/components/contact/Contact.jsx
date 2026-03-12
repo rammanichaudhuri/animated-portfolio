@@ -73,7 +73,7 @@ const Contact = () => {
                             />
                         }
                         gridSize={8}
-                        pixelColor="#ff89d4"
+                        pixelColor="#ffffff"
                         once={false}
                         animationStepDuration={0.4}
                         className="contact-pixel"
