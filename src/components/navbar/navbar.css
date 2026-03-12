@@ -60,7 +60,7 @@
 
 .navbar-link:hover,
 .navbar-link--active {
-    color: rgb(26, 19, 31);
+    color: #ff89d4;
 }
 
 .navbar-link:hover::after,
@@ -82,9 +82,9 @@
 }
 
 .navbar-cta:hover {
-    background: #ffffff;
+    background: #ff89d4;
     color: #fff;
-    border-color: #ffffff;
+    border-color: #ff89d4;
 }
 
 /* Hamburger */
