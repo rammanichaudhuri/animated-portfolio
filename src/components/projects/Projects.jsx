@@ -77,7 +77,6 @@ const Projects = () => {
                             </div>
                             <div className="projects-edu-right">
                                 <span className="projects-edu-period">{edu.period}</span>
-                                <span className="projects-edu-detail">{edu.detail}</span>
                             </div>
                         </div>
                     ))}

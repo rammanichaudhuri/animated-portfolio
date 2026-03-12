@@ -155,17 +155,25 @@
 }
 
 @media (max-width: 800px) {
-    .about-body {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
+    .about {
+        height: auto;
+        min-height: 100vh;
         overflow: auto;
         scrollbar-width: none;
         -ms-overflow-style: none;
-        padding-bottom: 2rem;
     }
 
-    .about-body::-webkit-scrollbar {
+    .about::-webkit-scrollbar {
         display: none;
+    }
+
+    .about-body {
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        overflow: visible;
+        height: auto;
+        padding-bottom: 2rem;
     }
 
     .about-content {

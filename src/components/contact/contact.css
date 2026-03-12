@@ -156,18 +156,26 @@
 }
 
 @media (max-width: 780px) {
-    .contact-body {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr auto;
+    .contact {
+        height: auto;
+        min-height: 100vh;
         overflow: auto;
         scrollbar-width: none;
         -ms-overflow-style: none;
-        padding-bottom: 2rem;
-        align-items: start;
     }
 
-    .contact-body::-webkit-scrollbar {
+    .contact::-webkit-scrollbar {
         display: none;
+    }
+
+    .contact-body {
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        overflow: visible;
+        height: auto;
+        padding-bottom: 2rem;
+        align-items: start;
     }
 
     .contact-content {
