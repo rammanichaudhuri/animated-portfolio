@@ -2,6 +2,7 @@ import { NavLink, Link, useLocation } from "react-router-dom";
 import './navbar.css';
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import RevealText from './RevealText';
 
 const NAV_LINKS = [
     { to: '/', label: 'home', end: true },
@@ -33,7 +34,7 @@ export const Navbar = () => {
                                 `navbar-link${isActive ? ' navbar-link--active' : ''}`
                             }
                         >
-                            {label}
+                            <RevealText text={label} />
                         </NavLink>
                     ))}
                 </nav>

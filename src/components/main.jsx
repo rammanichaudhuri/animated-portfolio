@@ -8,7 +8,7 @@ const HomePage = () => {
 
             <div className="home-body">
                 <div className="home-hero">
-                    <p className="home-eyebrow">frontend&nbsp;developer&nbsp;·&nbsp;ui engineer</p>
+                    <p className="home-eyebrow">software&nbsp;developer&nbsp;/&nbsp;frontend</p>
                     <h1 className="home-title">
                         hi, i'm<br />
                         <span className="home-title-name">rammani.</span>
