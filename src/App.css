@@ -46,3 +46,11 @@ a, button {
     transform-origin: top;
     z-index: 9999;
 }
+
+@media (max-width: 800px) {
+    body {
+        overflow: auto;
+        height: auto;
+        min-height: 100vh;
+    }
+}

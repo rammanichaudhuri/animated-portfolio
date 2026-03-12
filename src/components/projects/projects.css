@@ -144,6 +144,31 @@
     }
 }
 
+@media (max-width: 800px) {
+    .projects {
+        height: auto;
+        min-height: 100vh;
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .projects::-webkit-scrollbar {
+        display: none;
+    }
+
+    .projects-body {
+        position: relative;
+        height: auto;
+        overflow: visible;
+    }
+
+    .projects-menu {
+        overflow: visible;
+        min-height: 0;
+    }
+}
+
 @media (max-width: 600px) {
     .projects-heading {
         font-size: 1.4rem;
