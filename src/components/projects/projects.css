@@ -1,82 +1,170 @@
-.headingProject {
-    margin-top: 4em;
-    padding: 5vh 10vh;
-    font-size: 4vh;
-    color: #ffffff;
-}
-
-body {
-    height: 100vh;
-    font-family: 'Pixelify Sans', sans-serif;
-}
-
-.containerProject {
-    overflow: hidden;
+.projects {
     position: relative;
+    height: 100vh;
+    width: 100%;
     background-image: url('https://cdn.cosmos.so/0d3abf47-ebb3-4dfb-aa79-0ce908678a71?format=jpeg');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
     overflow: hidden;
+}
+
+.projects-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(236, 200, 230, 0.18);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.projects-body {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding-top: 64px;
+    overflow: hidden;
+}
+
+/* ── Heading ── */
+.projects-heading {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+    color: rgb(26, 19, 31);
+    margin: 0;
+    padding: 1.8rem 6vw 1rem;
+    letter-spacing: -0.5px;
+    flex-shrink: 0;
+}
+
+.projects-heading-accent {
+    color: #ff89d4;
+}
+
+/* ── Menu ── */
+.projects-menu {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* ── Education bar ── */
+.projects-edu {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
+    gap: 2rem;
+    padding: 0.75rem 6vw;
+    border-top: 1px solid rgba(26, 19, 31, 0.12);
+    background: rgba(236, 200, 230, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-wrap: wrap;
 }
 
-.subContainerProject {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
+.projects-edu-label {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #ff89d4;
+    flex-shrink: 0;
+}
+
+.projects-edu-item {
     display: flex;
-    align-items: start;
-    justify-content: start;
-    z-index: 1;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.projects-edu-left {
     display: flex;
-    padding-bottom: 2em;
-    flex-direction: column;
+    align-items: baseline;
+    gap: 0.75rem;
 }
 
-@media screen and (max-width: 1700px) {
-
-    .subContainerProject {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        gap: 0.8rem;
-        margin-top: 3em;
-        height: 100%;
-        padding-bottom: 6em;
-        overflow: auto;
-    }
-
-    /* .headingProject {
-        margin-left: 2rem;
-        padding: 0;
-        width: 75%;
-    } */
-
+.projects-edu-institution {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: rgb(26, 19, 31);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-@media screen and (max-width: 1024px) {
+.projects-edu-degree {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 0.72rem;
+    color: rgba(26, 19, 31, 0.6);
+}
 
-    .subContainerProject {
-        display: flex;
+.projects-edu-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: auto;
+}
+
+.projects-edu-period {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 0.7rem;
+    color: rgba(26, 19, 31, 0.45);
+    white-space: nowrap;
+}
+
+.projects-edu-detail {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 0.65rem;
+    color: rgba(26, 19, 31, 0.38);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .projects-heading {
+        padding: 1.5rem 5vw 0.75rem;
+    }
+
+    .projects-edu {
+        padding: 0.65rem 5vw;
+        gap: 1rem;
+    }
+
+    .projects-edu-right {
         flex-direction: column;
-        justify-content: start;
-        gap: 0.8rem;
-        margin-top: 3em;
-        height: 100%;
-        padding-bottom: 6em;
-        overflow: auto;
+        align-items: flex-start;
+        gap: 0.2rem;
+        margin-left: 0;
     }
 
-    .headingProject {
-        margin-left: 2rem;
-        padding: 0;
-        width: 75%;
+    .projects-edu-detail {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-heading {
+        font-size: 1.4rem;
+        padding: 1.2rem 5vw 0.6rem;
     }
 
+    .projects-edu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+        padding: 0.6rem 5vw;
+    }
+
+    .projects-edu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+    .projects-edu-right {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
