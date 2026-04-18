@@ -9,7 +9,6 @@ import { AnimatePresence } from 'framer-motion';
 import { Transition } from './Transition';
 import { useState, useEffect } from 'react';
 import CountUp from './CountUp';
-import Cursor from './Cursor';
 import Noise from './components/Noise';
 
 function App() {
@@ -47,7 +46,6 @@ function App() {
   return (
     <div>
       <Noise patternAlpha={10} patternRefreshInterval={3} />
-      <Cursor />
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname} initial={false}>
