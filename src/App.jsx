@@ -10,7 +10,7 @@ import { Transition } from './Transition';
 import { useState, useEffect } from 'react';
 import CountUp from './CountUp';
 import Cursor from './Cursor';
-import Silk from './components/Silk';
+import Noise from './components/Noise';
 
 function App() {
   const location = useLocation();
@@ -28,28 +28,25 @@ function App() {
   if (showA) {
     return (
       <div className='countUp'>
-        <CountUp
-          from={0}
-          to={100}
-          separator=","
-          direction="up"
-          duration={1}
-          className="count-up-text"
-          startCounting={false}
-        />
+        <div className='countUp-inner'>
+          <CountUp
+            from={0}
+            to={100}
+            separator=","
+            direction="up"
+            duration={1}
+            className="count-up-text"
+            startCounting={false}
+          />
+          <span className='countUp-label'>loading</span>
+        </div>
       </div>
     );
   }
 
   return (
     <div>
-      {/* <div className='silk'>
-        <Silk speed={5}
-          scale={1}
-          color="#7B7481"
-          noiseIntensity={1.5}
-          rotation={0} />
-      </div> */}
+      <Noise patternAlpha={10} patternRefreshInterval={3} />
       <Cursor />
       <Navbar />
       <AnimatePresence mode="wait">

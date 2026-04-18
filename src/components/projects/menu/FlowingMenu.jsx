@@ -219,29 +219,32 @@ function MenuItem({ link, text, descript, descriptn, timePeriod, image, speed, t
       <div className="marquee" ref={marqueeRef} style={{ backgroundColor: marqueeBgColor }}>
         <div className="marquee__inner-wrap">
           <div className="marquee__inner" ref={marqueeInnerRef} aria-hidden="true">
-            {descriptn} {`[click to learn more.]`}
+            {Array.from({ length: repetitions }, (_, i) => (
+              <span key={i} className="marquee__part">
+                {image && <div className="marquee__img" style={{ backgroundImage: `url(${image})` }} />}
+                <span>{descriptn}&nbsp;&nbsp;✦&nbsp;&nbsp;</span>
+              </span>
+            ))}
           </div>
         </div>
       </div>
       {modal ? <div className='modal-overlay'>
         <div className="modal-content">
           <div className='modal-text'>
-            {modalContent.map((item) => {
-              return (
-                <>
-                  <h2 className='modal-text' style={{ color: "black", justifySelf: "start" }}>
-                    {item.link !== "" ?
-                      <span><a target="_blank" style={{ textDecoration: "underline" }} href={item.link}>{item.id}</a></span> :
-                      <span>{item.id}</span>
-                    }
-                  </h2>
-                  <p className='modal-text' style={{ color: "black" }}>
-                    {item.projectDesc.map((descrpt) => {
-                      return <li className='modal-text' style={{ textAlign: "start" }}>{descrpt}</li>
-                    })}</p>
-                </>
-              );
-            })}
+            {modalContent.map((item, idx) => (
+              <div key={idx}>
+                <h2 style={{ color: "black", justifySelf: "start", fontFamily: 'Pixelify Sans', fontSize: '1.3rem', marginBottom: '1rem' }}>
+                  {item.link !== "" ? (
+                    <a target="_blank" rel="noopener noreferrer" style={{ textDecoration: "underline" }} href={item.link}>{item.id}</a>
+                  ) : item.id}
+                </h2>
+                <ul style={{ paddingLeft: '1.2rem', margin: 0 }}>
+                  {item.projectDesc.map((descrpt, j) => (
+                    <li key={j} className='modal-text' style={{ textAlign: "start", marginBottom: '0.5rem' }}>{descrpt}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
           <button className='modal-close-button' onClick={() => openProjectModal(text, 'close')}>close</button>
         </div>
