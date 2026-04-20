@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
 import './FlowingMenu.css';
@@ -81,16 +81,14 @@ function FlowingMenu({
   );
 }
 
-function MenuItem({ link, text, descript, descriptn, timePeriod, image, speed, textColor, marqueeBgColor, marqueeTextColor, borderColor }) {
+function MenuItem({ link, text, descript, descriptn, timePeriod, textColor, marqueeBgColor, borderColor }) {
   const itemRef = useRef(null);
   const marqueeRef = useRef(null);
   const marqueeInnerRef = useRef(null);
-  const animationRef = useRef(null);
-  const [repetitions, setRepetitions] = useState(4);
   const [modal, setModal] = useState(false);
   const [modalContent, setModalContent] = useState(null);
 
-  const [deviceWidth, deviceHeight] = useDeviceSize();
+  const [deviceWidth] = useDeviceSize();
 
   const openProjectModal = (id, action) => {
     if (action === "open") {
@@ -116,62 +114,6 @@ function MenuItem({ link, text, descript, descriptn, timePeriod, image, speed, t
     const yDiff = y - y2;
     return xDiff * xDiff + yDiff * yDiff;
   };
-
-  useEffect(() => {
-    const calculateRepetitions = () => {
-      if (!marqueeInnerRef.current) return;
-
-      // Get the first marquee part to measure content width
-      const marqueeContent = marqueeInnerRef.current.querySelector('.marquee__part');
-      if (!marqueeContent) return;
-
-      const contentWidth = marqueeContent.offsetWidth;
-      const viewportWidth = window.innerWidth;
-
-      // Calculate how many copies we need to fill viewport + extra for seamless loop
-      // We need at least 2, but calculate based on content vs viewport
-      const needed = Math.ceil(viewportWidth / contentWidth) + 2;
-      setRepetitions(Math.max(4, needed));
-    };
-
-    calculateRepetitions();
-    window.addEventListener('resize', calculateRepetitions);
-    return () => window.removeEventListener('resize', calculateRepetitions);
-  }, [text, descriptn]);
-
-  useEffect(() => {
-    const setupMarquee = () => {
-      if (!marqueeInnerRef.current) return;
-
-      const marqueeContent = marqueeInnerRef.current.querySelector('.marquee__part');
-      if (!marqueeContent) return;
-
-      const contentWidth = marqueeContent.offsetWidth;
-      if (contentWidth === 0) return;
-
-      if (animationRef.current) {
-        animationRef.current.kill();
-      }
-
-      // Animate exactly one content width for seamless loop
-      animationRef.current = gsap.to(marqueeInnerRef.current, {
-        x: -contentWidth,
-        duration: speed,
-        ease: 'none',
-        repeat: -1
-      });
-    };
-
-    // Small delay to ensure DOM is ready after repetitions update
-    const timer = setTimeout(setupMarquee, 50);
-
-    return () => {
-      clearTimeout(timer);
-      if (animationRef.current) {
-        animationRef.current.kill();
-      }
-    };
-  }, [text, image, repetitions, speed]);
 
   const handleMouseEnter = ev => {
     if (!itemRef.current || !marqueeRef.current || !marqueeInnerRef.current) return;
@@ -219,14 +161,9 @@ function MenuItem({ link, text, descript, descriptn, timePeriod, image, speed, t
       <div className="marquee" ref={marqueeRef} style={{ backgroundColor: marqueeBgColor }}>
         <div className="marquee__inner-wrap">
           <div className="marquee__inner" ref={marqueeInnerRef} aria-hidden="true">
-            {Array.from({ length: repetitions }).map((_, i) => (
-              <div key={i} className="marquee__part">
-                <span>{descriptn}</span>
-                <span style={{ padding: '0 1.5vw', opacity: 0.4 }}>·</span>
-                <span>click to learn more</span>
-                <span style={{ padding: '0 1.5vw', opacity: 0.4 }}>·</span>
-              </div>
-            ))}
+            <span>{descriptn}</span>
+            <span className="marquee__separator">·</span>
+            <span>click to learn more</span>
           </div>
         </div>
       </div>
