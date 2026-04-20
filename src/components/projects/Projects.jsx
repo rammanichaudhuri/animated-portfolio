@@ -36,15 +36,6 @@ const demoItems = [
     },
 ];
 
-const education = [
-    {
-        institution: 'IIT BHU',
-        degree: 'B.Tech — Electrical Engineering',
-        period: '2018 – 2022',
-        detail: 'Competitive programming (LeetCode · Codeforces) · DSA · robotics & electronics projects',
-    },
-];
-
 const Projects = () => {
     return (
         <div className="projects">
@@ -65,21 +56,6 @@ const Projects = () => {
                         marqueeTextColor="#060010"
                         borderColor="rgba(26,19,31,0.12)"
                     />
-                </div>
-
-                <div className="projects-edu">
-                    <span className="projects-edu-label">education</span>
-                    {education.map((edu, i) => (
-                        <div key={i} className="projects-edu-item">
-                            <div className="projects-edu-left">
-                                <span className="projects-edu-institution">{edu.institution}</span>
-                                <span className="projects-edu-degree">{edu.degree}</span>
-                            </div>
-                            <div className="projects-edu-right">
-                                <span className="projects-edu-period">{edu.period}</span>
-                            </div>
-                        </div>
-                    ))}
                 </div>
             </div>
         </div>

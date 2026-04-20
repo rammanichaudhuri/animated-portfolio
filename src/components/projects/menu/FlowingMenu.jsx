@@ -219,7 +219,14 @@ function MenuItem({ link, text, descript, descriptn, timePeriod, image, speed, t
       <div className="marquee" ref={marqueeRef} style={{ backgroundColor: marqueeBgColor }}>
         <div className="marquee__inner-wrap">
           <div className="marquee__inner" ref={marqueeInnerRef} aria-hidden="true">
-            {descriptn} {`[click to learn more.]`}
+            {Array.from({ length: repetitions }).map((_, i) => (
+              <div key={i} className="marquee__part">
+                <span>{descriptn}</span>
+                <span style={{ padding: '0 1.5vw', opacity: 0.4 }}>·</span>
+                <span>click to learn more</span>
+                <span style={{ padding: '0 1.5vw', opacity: 0.4 }}>·</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

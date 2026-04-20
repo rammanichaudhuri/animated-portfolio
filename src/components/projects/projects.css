@@ -44,103 +44,15 @@
 
 /* ── Menu ── */
 .projects-menu {
-    flex: 1;
-    min-height: 0;
+    flex: 0 0 auto;
     overflow: hidden;
 }
 
-/* ── Education bar ── */
-.projects-edu {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 0.75rem 6vw;
-    border-top: 1px solid rgba(26, 19, 31, 0.12);
-    background: rgba(236, 200, 230, 0.55);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    flex-wrap: wrap;
-}
-
-.projects-edu-label {
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: #ffffff;
-    flex-shrink: 0;
-}
-
-.projects-edu-item {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    flex: 1;
-    flex-wrap: wrap;
-}
-
-.projects-edu-left {
-    display: flex;
-    align-items: baseline;
-    gap: 0.75rem;
-}
-
-.projects-edu-institution {
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: rgb(26, 19, 31);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.projects-edu-degree {
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 0.72rem;
-    color: rgba(26, 19, 31, 0.6);
-}
-
-.projects-edu-right {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-left: auto;
-}
-
-.projects-edu-period {
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 0.7rem;
-    color: rgba(26, 19, 31, 0.45);
-    white-space: nowrap;
-}
-
-.projects-edu-detail {
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 0.65rem;
-    color: rgba(26, 19, 31, 0.38);
-}
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
     .projects-heading {
         padding: 1.5rem 5vw 0.75rem;
-    }
-
-    .projects-edu {
-        padding: 0.65rem 5vw;
-        gap: 1rem;
-    }
-
-    .projects-edu-right {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.2rem;
-        margin-left: 0;
-    }
-
-    .projects-edu-detail {
-        display: none;
     }
 }
 
@@ -165,7 +77,6 @@
 
     .projects-menu {
         overflow: visible;
-        min-height: 0;
     }
 }
 
@@ -173,23 +84,5 @@
     .projects-heading {
         font-size: 1.4rem;
         padding: 1.2rem 5vw 0.6rem;
-    }
-
-    .projects-edu {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.4rem;
-        padding: 0.6rem 5vw;
-    }
-
-    .projects-edu-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.3rem;
-    }
-
-    .projects-edu-right {
-        flex-direction: row;
-        flex-wrap: wrap;
     }
 }
