@@ -9,7 +9,6 @@ import { AnimatePresence } from 'framer-motion';
 import { Transition } from './Transition';
 import { useState, useEffect } from 'react';
 import CountUp from './CountUp';
-import Cursor from './Cursor';
 import Silk from './components/Silk';
 
 function App() {
@@ -50,7 +49,6 @@ function App() {
           noiseIntensity={1.5}
           rotation={0} />
       </div> */}
-      <Cursor />
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname} initial={false}>
